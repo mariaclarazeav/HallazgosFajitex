@@ -1,0 +1,2458 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De hoy a $500 millones al mes</title>
+<meta name="description" content="Resultados de la gestión de Mercadeo Digital y Omnicanalidad de Fajitex y la ruta hacia $500.000.000 de venta mensual.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<style>
+/* ============================================================
+   FAJITEX · Presentación a Presidencia
+   Identidad: rojo y rosado sobre nude, tipografía editorial.
+   ============================================================ */
+
+:root{
+  color-scheme: light;
+
+  /* Superficies */
+  --papel:      #FBF4F0;
+  --papel-2:    #F5E7E0;
+  --papel-3:    #EFD9D0;
+  --linea:      #E3CCC1;
+  --linea-sutil:#EADAD2;
+
+  /* Tinta */
+  --tinta:      #2B141B;
+  --tinta-med:  #6A4C54;
+  --tinta-sua:  #8E7078;
+
+  /* Marca */
+  --vino:       #4E0C1E;
+  --vino-osc:   #2C0512;
+  --rojo:       #D01E4B;
+  --rojo-osc:   #A81440;
+  --rojo-cl:    #F0577D;
+  --rosa:       #F7A8BC;
+  --rosa-pal:   #FBD5DE;
+  --nude:       #C3A08D;
+  --nude-cl:    #E2C9BB;
+
+  /* Sobre fondo vino */
+  --sobre-vino:      #FDEFEF;
+  --sobre-vino-med:  rgba(253,239,239,.72);
+  --sobre-vino-sua:  rgba(253,239,239,.46);
+  --linea-vino:      rgba(247,168,188,.24);
+
+  /* Dato pendiente */
+  --oro:        #FFD84D;
+  --oro-osc:    #7A5A00;
+
+  /* Estados */
+  --ok:         #1F6F52;
+  --ok-fondo:   #DCEFE5;
+  --proceso:    #9A5510;
+  --proceso-fondo:#F8E6D3;
+  --abierto:    #5B4750;
+  --abierto-fondo:#EBE0E3;
+
+  /* Ritmo */
+  --wrap: 1220px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --seccion-y: clamp(84px, 9vw, 150px);
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --texto: "Instrument Sans", "Segoe UI", sans-serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+[hidden]{ display:none !important; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:var(--texto);
+  font-size:clamp(15.5px, .52vw + 14px, 17.5px);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+
+/* --- Tipografía base --- */
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 120, "SOFT" 55, "WONK" 1;
+  font-weight:600;
+  margin:0;
+  text-wrap:balance;
+  letter-spacing:-.018em;
+  line-height:1.02;
+}
+p{ margin:0; }
+a{ color:inherit; }
+
+.h-seccion{ font-size:clamp(2.1rem, 3.5vw, 3.5rem); }
+.h-tarjeta{
+  font-family:var(--texto);
+  font-size:1.02rem;
+  font-weight:600;
+  letter-spacing:-.005em;
+  line-height:1.3;
+  margin:0;
+}
+.parrafo{ max-width:64ch; color:var(--tinta-med); }
+.parrafo.ancho{ max-width:74ch; }
+
+.eyebrow{
+  font-family:var(--texto);
+  font-size:.7rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:var(--rojo);
+  margin:0 0 18px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.eyebrow::before{
+  content:"";
+  width:26px; height:2px;
+  background:var(--rojo);
+  flex:none;
+}
+.eyebrow.claro{ color:var(--rosa); }
+.eyebrow.claro::before{ background:var(--rosa); }
+
+.nota-pie{
+  font-size:.82rem;
+  color:var(--tinta-sua);
+  line-height:1.5;
+  max-width:70ch;
+}
+.nota-pie.claro{ color:var(--sobre-vino-sua); }
+
+.cifra{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 144, "SOFT" 40, "WONK" 0;
+  font-weight:500;
+  font-variant-numeric:tabular-nums lining-nums;
+  letter-spacing:-.03em;
+  line-height:.94;
+}
+
+/* --- Estructura --- */
+.wrap{
+  width:100%;
+  max-width:var(--wrap);
+  margin-inline:auto;
+  padding-inline:var(--gutter);
+}
+section{ padding-block:var(--seccion-y); position:relative; }
+section[id]{ scroll-margin-top:78px; }
+
+.cabecera-seccion{ margin-bottom:clamp(38px, 4.5vw, 64px); max-width:70ch; }
+.cabecera-seccion .parrafo{ margin-top:20px; }
+
+.franja-oscura{
+  background:
+    radial-gradient(1100px 620px at 78% 8%, rgba(208,30,75,.34), transparent 62%),
+    radial-gradient(760px 520px at 6% 92%, rgba(247,168,188,.16), transparent 60%),
+    linear-gradient(168deg, var(--vino) 0%, var(--vino-osc) 100%);
+  color:var(--sobre-vino);
+}
+.franja-oscura .parrafo{ color:var(--sobre-vino-med); }
+.franja-oscura::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  opacity:.5;
+  background-image:repeating-linear-gradient(115deg, rgba(255,255,255,.055) 0 1px, transparent 1px 7px);
+  mix-blend-mode:overlay;
+}
+.franja-oscura > *{ position:relative; z-index:1; }
+
+.franja-nude{ background:linear-gradient(180deg, var(--papel) 0%, var(--papel-2) 100%); }
+
+/* --- Enlace de salto --- */
+.saltar{
+  position:absolute; left:-9999px; top:0;
+  background:var(--rojo); color:#fff;
+  padding:12px 18px; z-index:200; border-radius:0 0 var(--r-sm) 0;
+  font-weight:600; font-size:.85rem;
+}
+.saltar:focus{ left:0; }
+
+/* --- Navegación --- */
+.barra-progreso{
+  position:fixed; inset:0 auto auto 0;
+  height:3px; width:100%;
+  transform:scaleX(0); transform-origin:0 50%;
+  background:linear-gradient(90deg, var(--rojo) 0%, var(--rosa) 100%);
+  z-index:120;
+}
+.nav{
+  position:fixed; top:0; left:0; right:0;
+  z-index:110;
+  display:flex; align-items:center; gap:24px;
+  padding:14px var(--gutter);
+  background:transparent;
+  border-bottom:1px solid transparent;
+  transition:background .45s ease, border-color .45s ease, padding .45s ease, color .45s ease;
+  color:var(--sobre-vino);
+}
+.nav.solida{
+  background:rgba(251,244,240,.92);
+  backdrop-filter:blur(14px) saturate(1.15);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  border-bottom-color:var(--linea-sutil);
+  color:var(--tinta);
+  padding-block:10px;
+}
+.marca{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 144, "SOFT" 30, "WONK" 1;
+  font-weight:700;
+  font-size:1.12rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  flex:none;
+}
+.marca span{ color:var(--rojo-cl); }
+.nav.solida .marca span{ color:var(--rojo); }
+
+.nav-enlaces{
+  display:flex; align-items:center; gap:4px;
+  margin-left:auto;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.nav-enlaces::-webkit-scrollbar{ display:none; }
+.nav-enlaces a{
+  flex:none;
+  text-decoration:none;
+  font-size:.71rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  padding:8px 11px;
+  border-radius:999px;
+  color:inherit;
+  opacity:.66;
+  transition:opacity .25s ease, background .25s ease;
+  white-space:nowrap;
+}
+.nav-enlaces a:hover{ opacity:1; }
+.nav-enlaces a.activo{ opacity:1; background:rgba(247,168,188,.2); }
+.nav.solida .nav-enlaces a.activo{ background:var(--papel-3); color:var(--rojo-osc); }
+
+:where(a,button,input,textarea,summary):focus-visible{
+  outline:2.5px solid var(--rojo-cl);
+  outline-offset:3px;
+  border-radius:var(--r-sm);
+}
+.franja-oscura :where(a,button):focus-visible{ outline-color:var(--rosa); }
+
+/* --- Dato pendiente --- */
+.pend{
+  display:inline-block;
+  background:var(--oro);
+  color:var(--oro-osc);
+  font-family:var(--texto);
+  font-weight:700;
+  font-size:.7em;
+  letter-spacing:.02em;
+  line-height:1.25;
+  padding:.18em .5em;
+  border-radius:4px;
+  box-shadow:0 0 0 1px rgba(122,90,0,.28) inset;
+  vertical-align:middle;
+  text-transform:none;
+  font-variation-settings:normal;
+  white-space:normal;
+}
+.pend::before{ content:"⌁ "; opacity:.65; }
+.cifra .pend{ font-size:.32em; }
+.hito-valor .pend{ font-size:.44em; }
+.escalon-meta .cifra .pend{ font-size:.34em; }
+.trayecto .pend{ font-size:.5em; }
+
+/* --- HERO --- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex; align-items:center;
+  padding-block:clamp(120px,14vh,180px) clamp(70px,9vh,110px);
+  overflow:hidden;
+}
+#lienzo-hilos{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  z-index:0; opacity:.9;
+}
+.hero .wrap{ position:relative; z-index:2; }
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);
+  gap:clamp(32px,5vw,80px);
+  align-items:end;
+}
+.hero h1{
+  font-size:clamp(2.9rem, 7.2vw, 6.4rem);
+  font-variation-settings:"opsz" 144, "SOFT" 70, "WONK" 1;
+  font-weight:500;
+  line-height:.93;
+  letter-spacing:-.035em;
+}
+.hero h1 em{
+  font-style:normal;
+  display:block;
+  color:var(--rosa);
+  font-weight:600;
+}
+.h1-desde{
+  display:block;
+  font-size:.34em;
+  font-weight:600;
+  letter-spacing:-.01em;
+  color:var(--sobre-vino-med);
+  margin-bottom:.22em;
+}
+.h1-desde .pend{ font-size:.5em; vertical-align:.18em; }
+.hero-sub{
+  margin-top:26px;
+  font-size:clamp(1.02rem,1.25vw,1.22rem);
+  color:var(--sobre-vino-med);
+  max-width:46ch;
+}
+.hero-sub b{ color:var(--sobre-vino); font-weight:600; }
+.hero-firma{
+  margin-top:34px;
+  padding-top:22px;
+  border-top:1px solid var(--linea-vino);
+  font-size:.82rem;
+  color:var(--sobre-vino-sua);
+  letter-spacing:.03em;
+  max-width:46ch;
+}
+
+/* Termómetro de meta */
+.termometro{
+  background:rgba(253,239,239,.06);
+  border:1px solid var(--linea-vino);
+  border-radius:var(--r-lg);
+  padding:clamp(22px,2.4vw,32px);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.termometro-titulo{
+  font-size:.68rem; font-weight:600; text-transform:uppercase;
+  letter-spacing:.2em; color:var(--rosa); margin-bottom:20px;
+}
+.pista{
+  position:relative;
+  height:13px;
+  border-radius:999px;
+  background:rgba(253,239,239,.13);
+  overflow:hidden;
+  margin-bottom:8px;
+}
+.pista-relleno{
+  position:absolute; inset:0 auto 0 0;
+  width:0;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--rosa) 0%, var(--rojo-cl) 55%, var(--rojo) 100%);
+  transition:width 1.6s cubic-bezier(.22,.9,.24,1);
+}
+.pista-hito{
+  position:absolute; top:-4px; bottom:-4px;
+  width:2px;
+  background:var(--sobre-vino-sua);
+}
+.pista-hito.h1{ left:50%; }
+.pista-hito.h2{ left:calc(100% - 2px); }
+.pista-escala{
+  display:flex; justify-content:space-between;
+  font-size:.66rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--sobre-vino-sua);
+  margin-bottom:26px;
+}
+.hitos{ display:grid; gap:16px; }
+.hito-fila{
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--linea-vino);
+}
+.hito-fila:last-child{ border-bottom:0; padding-bottom:0; }
+.hito-etiqueta{
+  font-size:.7rem; text-transform:uppercase; letter-spacing:.16em;
+  color:var(--sobre-vino-sua);
+}
+.hito-etiqueta b{ display:block; color:var(--rosa); font-size:.68rem; letter-spacing:.16em; font-weight:600; margin-top:4px; }
+.hito-valor{ font-size:clamp(1.3rem,2.1vw,1.85rem); color:var(--sobre-vino); }
+.hito-fila.destacado .hito-valor{ color:var(--rosa); }
+
+.cue{
+  position:absolute; left:50%; bottom:26px;
+  transform:translateX(-50%);
+  z-index:2;
+  font-size:.66rem; text-transform:uppercase; letter-spacing:.24em;
+  color:var(--sobre-vino-sua);
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  text-decoration:none;
+}
+.cue i{
+  display:block; width:1px; height:34px;
+  background:linear-gradient(180deg, var(--rosa), transparent);
+  animation:caer 2.4s ease-in-out infinite;
+}
+@keyframes caer{ 0%,100%{ transform:scaleY(.4); opacity:.4 } 50%{ transform:scaleY(1); opacity:1 } }
+
+/* --- Tarjetas genéricas --- */
+.rejilla{ display:grid; gap:clamp(14px,1.4vw,20px); }
+.r-2{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+.r-3{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.r-4{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.r-5{ grid-template-columns:repeat(5,minmax(0,1fr)); }
+
+.tarjeta{
+  background:#fff;
+  border:1px solid var(--linea-sutil);
+  border-radius:var(--r-md);
+  padding:clamp(20px,2vw,28px);
+  display:flex; flex-direction:column; gap:12px;
+  position:relative;
+}
+.tarjeta .etiqueta{
+  font-size:.68rem; font-weight:600; text-transform:uppercase;
+  letter-spacing:.15em; color:var(--tinta-sua);
+}
+.tarjeta .dato{ font-size:clamp(1.9rem,2.9vw,2.7rem); color:var(--tinta); }
+.tarjeta .apunte{ font-size:.87rem; color:var(--tinta-med); line-height:1.5; }
+
+/* Métricas Shopify */
+.metrica{ justify-content:space-between; }
+.metrica.destacada{
+  background:linear-gradient(165deg, #fff 0%, var(--rosa-pal) 130%);
+  border-color:var(--rosa);
+  box-shadow:0 18px 40px -28px rgba(208,30,75,.6);
+}
+.metrica.destacada .dato{ color:var(--rojo-osc); }
+.variaciones{ display:grid; gap:7px; margin-top:2px; }
+.var-fila{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  font-size:.79rem; color:var(--tinta-sua);
+  border-top:1px dashed var(--linea);
+  padding-top:7px;
+}
+.chip-var{
+  font-weight:700; font-variant-numeric:tabular-nums;
+  padding:2px 8px; border-radius:999px;
+  background:var(--papel-2); color:var(--tinta-med);
+  font-size:.78rem;
+}
+.chip-var.sube{ background:var(--ok-fondo); color:var(--ok); }
+.chip-var.baja{ background:#F9E0E6; color:var(--rojo-osc); }
+.sello{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ok); background:var(--ok-fondo);
+  padding:7px 13px; border-radius:999px;
+}
+
+/* Diagnóstico */
+.diag{ border-left:3px solid var(--rojo); }
+.diag.medio{ border-left-color:var(--nude); }
+.diag .severidad{
+  font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+  color:var(--rojo-osc);
+}
+.diag.medio .severidad{ color:var(--tinta-sua); }
+.trayecto{
+  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  font-family:var(--display); font-variation-settings:"opsz" 144;
+  font-variant-numeric:tabular-nums;
+}
+.trayecto .de{ font-size:1.5rem; color:var(--tinta-sua); }
+.trayecto .flecha{ color:var(--rojo); font-family:var(--texto); font-size:1.1rem; }
+.trayecto .a{ font-size:clamp(1.9rem,2.6vw,2.5rem); color:var(--rojo-osc); }
+
+/* --- Auditoría, línea de tiempo --- */
+.linea-tiempo{ position:relative; display:grid; gap:clamp(16px,1.6vw,22px); }
+.linea-tiempo::before{
+  content:"";
+  position:absolute; left:19px; top:14px; bottom:14px;
+  width:2px;
+  background:linear-gradient(180deg, var(--rojo) 0%, var(--nude-cl) 100%);
+  opacity:.5;
+}
+.hallazgo{
+  position:relative;
+  margin-left:52px;
+  background:#fff;
+  border:1px solid var(--linea-sutil);
+  border-radius:var(--r-md);
+  padding:clamp(20px,2vw,28px);
+}
+.hallazgo::before{
+  content:"";
+  position:absolute; left:-45px; top:26px;
+  width:14px; height:14px; border-radius:50%;
+  background:var(--papel);
+  border:3px solid var(--rojo);
+}
+.hallazgo.abierto::before{ border-color:var(--nude); }
+.hallazgo-cab{
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:16px; flex-wrap:wrap; margin-bottom:16px;
+}
+.hallazgo h3{
+  font-family:var(--texto); font-weight:600;
+  font-size:1.12rem; letter-spacing:-.005em; line-height:1.3;
+  max-width:52ch;
+}
+.estado{
+  flex:none;
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em;
+  padding:6px 12px; border-radius:999px;
+  display:inline-flex; align-items:center; gap:7px;
+}
+.estado::before{ content:""; width:7px; height:7px; border-radius:50%; background:currentColor; }
+.estado.ok{ color:var(--ok); background:var(--ok-fondo); }
+.estado.proceso{ color:var(--proceso); background:var(--proceso-fondo); }
+.estado.investigacion{ color:var(--abierto); background:var(--abierto-fondo); }
+
+.antes-despues{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--linea-sutil); border-radius:var(--r-sm); overflow:hidden; }
+.ad-celda{ background:var(--papel); padding:16px 18px; }
+.ad-celda.despues{ background:linear-gradient(160deg, var(--papel-2), #fff); }
+.ad-titulo{
+  font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em;
+  color:var(--tinta-sua); margin-bottom:8px;
+}
+.ad-celda.despues .ad-titulo{ color:var(--rojo); }
+.ad-texto{ font-size:.9rem; line-height:1.55; color:var(--tinta-med); }
+.impacto{
+  margin-top:16px; padding-top:14px; border-top:1px dashed var(--linea);
+  font-size:.88rem; color:var(--tinta-med);
+}
+.impacto b{ color:var(--tinta); font-weight:600; }
+
+/* --- Gráficos --- */
+.panel-grafico{
+  background:rgba(253,239,239,.05);
+  border:1px solid var(--linea-vino);
+  border-radius:var(--r-lg);
+  padding:clamp(18px,2.2vw,30px);
+}
+.panel-grafico.claro{
+  background:#fff;
+  border-color:var(--linea-sutil);
+}
+.lienzo-caja{ position:relative; height:clamp(320px,42vh,440px); }
+.lienzo-caja.baja{ height:clamp(280px,34vh,360px); }
+.sin-datos{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:14px; text-align:center; padding:24px;
+  border:1.5px dashed var(--linea-vino);
+  border-radius:var(--r-md);
+}
+.panel-grafico.claro .sin-datos{ border-color:var(--linea); }
+.sin-datos p{ font-size:.88rem; max-width:42ch; color:var(--sobre-vino-sua); }
+.panel-grafico.claro .sin-datos p{ color:var(--tinta-sua); }
+
+.brecha-grid{
+  display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);
+  gap:clamp(20px,2.4vw,34px); align-items:stretch;
+}
+.lectura{
+  display:flex; flex-direction:column; gap:18px;
+  background:rgba(253,239,239,.05);
+  border:1px solid var(--linea-vino);
+  border-radius:var(--r-lg);
+  padding:clamp(22px,2.4vw,32px);
+}
+.lectura h3{
+  font-family:var(--texto); font-weight:600; font-size:1.05rem; line-height:1.35;
+  color:var(--rosa);
+}
+.lectura p{ font-size:.94rem; line-height:1.62; color:var(--sobre-vino-med); }
+.marcador-brecha{
+  border-top:1px solid var(--linea-vino);
+  padding-top:18px;
+  display:grid; gap:6px;
+}
+.marcador-brecha .cifra{ font-size:clamp(2.2rem,4vw,3.4rem); color:var(--rosa); }
+.marcador-brecha .etiqueta{
+  font-size:.68rem; text-transform:uppercase; letter-spacing:.16em; color:var(--sobre-vino-sua);
+}
+.roas-par{ display:flex; gap:10px; flex-wrap:wrap; }
+.roas-chip{
+  border:1px solid var(--linea-vino);
+  border-radius:999px;
+  padding:8px 15px;
+  font-size:.78rem;
+  color:var(--sobre-vino-med);
+  font-variant-numeric:tabular-nums;
+}
+.roas-chip b{ color:var(--sobre-vino); font-weight:600; }
+
+/* --- SEO --- */
+.medidor{
+  height:9px; border-radius:999px; background:var(--papel-3); overflow:hidden; margin-top:6px;
+}
+.medidor i{
+  display:block; height:100%; width:0;
+  background:linear-gradient(90deg, var(--rojo) 0%, var(--rosa) 100%);
+  transition:width 1.4s cubic-bezier(.22,.9,.24,1);
+}
+.fases{ display:grid; gap:clamp(14px,1.4vw,20px); grid-template-columns:repeat(3,minmax(0,1fr)); counter-reset:fase; }
+.fase{
+  background:#fff; border:1px solid var(--linea-sutil); border-radius:var(--r-md);
+  padding:clamp(20px,2vw,26px); display:flex; flex-direction:column; gap:12px;
+}
+.fase-num{
+  font-family:var(--display); font-variation-settings:"opsz" 144, "WONK" 1;
+  font-size:2.4rem; font-weight:500; color:var(--rosa); line-height:1;
+}
+.fase h3{ font-family:var(--texto); font-size:1.02rem; font-weight:600; line-height:1.3; }
+.fase ul{ margin:0; padding-left:18px; display:grid; gap:7px; font-size:.88rem; color:var(--tinta-med); }
+.fase li::marker{ color:var(--rojo); }
+
+/* --- Equipo --- */
+.rol{
+  background:#fff; border:1px solid var(--linea-sutil); border-radius:var(--r-md);
+  padding:clamp(22px,2.2vw,30px); display:flex; flex-direction:column; gap:18px;
+  border-top:4px solid var(--nude-cl);
+}
+.rol.mio{ border-top-color:var(--rojo); box-shadow:0 20px 44px -34px rgba(208,30,75,.55); }
+.rol-cargo{ font-family:var(--texto); font-size:1.05rem; font-weight:600; line-height:1.3; }
+.rol-quien{ font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; color:var(--rojo); font-weight:600; }
+.rol-aporte{ font-size:.92rem; color:var(--tinta-med); }
+.rol-bloque{ border-top:1px dashed var(--linea); padding-top:14px; }
+.rol-bloque .ad-titulo{ margin-bottom:9px; }
+.rol-bloque ul{ margin:0; padding-left:17px; display:grid; gap:6px; font-size:.87rem; color:var(--tinta-med); }
+.rol-bloque li::marker{ color:var(--nude); }
+.rol-bloque.falta li::marker{ color:var(--rojo); }
+
+/* --- Plan escalonado --- */
+.escalera{ display:grid; gap:clamp(16px,1.8vw,26px); }
+.escalon{
+  display:grid;
+  grid-template-columns:minmax(220px,.85fr) minmax(0,2fr);
+  gap:clamp(18px,2.4vw,40px);
+  background:#fff;
+  border:1px solid var(--linea-sutil);
+  border-radius:var(--r-lg);
+  padding:clamp(22px,2.4vw,34px);
+  position:relative;
+  overflow:hidden;
+}
+.escalon::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:4px;
+  background:var(--nude-cl);
+}
+.escalon.e1::before{ background:linear-gradient(180deg, var(--rosa), var(--rojo-cl)); }
+.escalon.e3::before{ background:linear-gradient(180deg, var(--rojo), var(--vino)); }
+.escalon.e3{ background:linear-gradient(150deg, #fff 40%, var(--rosa-pal) 160%); }
+@media (min-width:900px){
+  .escalon.e2{ margin-left:5%; }
+  .escalon.e3{ margin-left:10%; }
+}
+.escalon-meta .etiqueta{
+  font-size:.68rem; text-transform:uppercase; letter-spacing:.16em; color:var(--tinta-sua); font-weight:600;
+}
+.escalon-meta .cifra{ font-size:clamp(2rem,3.4vw,3rem); color:var(--rojo-osc); margin-top:8px; display:block; }
+.escalon-meta .mensual{
+  display:inline-block; margin-top:12px;
+  font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+  background:var(--papel-2); color:var(--tinta-med);
+  padding:5px 11px; border-radius:999px;
+}
+.palancas{ display:grid; gap:12px; }
+.palanca{
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px 18px;
+  align-items:start;
+  border-bottom:1px dashed var(--linea);
+  padding-bottom:12px;
+}
+.palanca:last-child{ border-bottom:0; padding-bottom:0; }
+.palanca p{ font-size:.92rem; color:var(--tinta-med); }
+.palanca p b{ color:var(--tinta); font-weight:600; }
+.lider{
+  flex:none; font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+  padding:5px 11px; border-radius:999px; white-space:nowrap;
+  background:var(--papel-2); color:var(--tinta-med);
+}
+.lider.md{ background:#F9E0E6; color:var(--rojo-osc); }
+.lider.wm{ background:#E7EDF0; color:#33525F; }
+.lider.mr{ background:var(--ok-fondo); color:var(--ok); }
+
+/* --- Cierre --- */
+.lista-decisiones{ display:grid; gap:12px; list-style:none; margin:0; padding:0; }
+.decision{
+  display:flex; gap:16px; align-items:flex-start;
+  background:rgba(253,239,239,.05);
+  border:1px solid var(--linea-vino);
+  border-radius:var(--r-md);
+  padding:18px 20px;
+  transition:background .3s ease, border-color .3s ease;
+}
+.decision:hover{ background:rgba(253,239,239,.09); }
+.decision input{
+  appearance:none; -webkit-appearance:none;
+  flex:none; width:20px; height:20px; margin-top:2px;
+  border:1.5px solid var(--rosa); border-radius:5px;
+  background:transparent; cursor:pointer;
+  display:grid; place-content:center;
+  transition:background .2s ease, border-color .2s ease;
+}
+.decision input::after{
+  content:"✓"; font-size:.8rem; font-weight:700; color:var(--vino-osc);
+  transform:scale(0); transition:transform .2s ease;
+}
+.decision input:checked{ background:var(--rosa); border-color:var(--rosa); }
+.decision input:checked::after{ transform:scale(1); }
+.decision label{ cursor:pointer; }
+.decision .d-titulo{ font-weight:600; font-size:.98rem; display:block; margin-bottom:5px; }
+.decision .d-detalle{ font-size:.87rem; color:var(--sobre-vino-med); line-height:1.55; max-width:82ch; }
+.decision input:checked ~ label .d-titulo{ text-decoration:line-through; opacity:.55; }
+.cierre-final{
+  margin-top:clamp(40px,5vw,70px);
+  padding-top:clamp(28px,3vw,40px);
+  border-top:1px solid var(--linea-vino);
+  display:flex; justify-content:space-between; gap:28px; flex-wrap:wrap; align-items:flex-end;
+}
+.cierre-final .frase{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 144, "SOFT" 60, "WONK" 1;
+  font-size:clamp(1.4rem,2.6vw,2.2rem);
+  font-weight:400; font-style:italic;
+  max-width:26ch; line-height:1.16;
+  color:var(--sobre-vino);
+}
+
+/* --- Panel de datos --- */
+.abrir-datos{
+  position:fixed; right:20px; bottom:20px; z-index:130;
+  display:inline-flex; align-items:center; gap:9px;
+  background:var(--tinta); color:var(--papel);
+  border:0; border-radius:999px;
+  padding:13px 20px;
+  font-family:var(--texto); font-size:.76rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:.12em;
+  cursor:pointer;
+  box-shadow:0 16px 34px -18px rgba(43,20,27,.75);
+  transition:transform .25s ease, background .25s ease;
+}
+.abrir-datos:hover{ transform:translateY(-2px); background:var(--rojo-osc); }
+.abrir-datos .punto{ width:8px; height:8px; border-radius:50%; background:var(--oro); flex:none; }
+
+.panel-datos{
+  position:fixed; top:0; right:0; bottom:0; z-index:150;
+  width:min(440px,100%);
+  background:var(--papel);
+  border-left:1px solid var(--linea);
+  box-shadow:-30px 0 70px -40px rgba(43,20,27,.6);
+  transform:translateX(102%);
+  transition:transform .45s cubic-bezier(.22,.9,.24,1);
+  display:flex; flex-direction:column;
+}
+.panel-datos.visible{ transform:translateX(0); }
+.panel-cab{
+  padding:22px var(--gutter) 18px 24px;
+  border-bottom:1px solid var(--linea-sutil);
+  display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+}
+.panel-cab h2{ font-size:1.4rem; }
+.panel-cab p{ font-size:.8rem; color:var(--tinta-sua); margin-top:7px; max-width:34ch; }
+.cerrar-panel{
+  background:none; border:1px solid var(--linea); border-radius:50%;
+  width:34px; height:34px; flex:none; cursor:pointer; color:var(--tinta-med);
+  font-size:1rem; line-height:1;
+}
+.cerrar-panel:hover{ background:var(--papel-2); }
+.panel-cuerpo{ overflow-y:auto; padding:22px 24px 30px; display:grid; gap:22px; }
+.grupo-campos > legend{
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em;
+  color:var(--rojo); padding:0; margin-bottom:12px;
+}
+.grupo-campos{ border:0; padding:0; margin:0; display:block; }
+.campo{ display:grid; gap:5px; margin-bottom:12px; }
+.campo label{ font-size:.78rem; color:var(--tinta-med); font-weight:500; }
+.campo input, .campo textarea{
+  font-family:var(--texto); font-size:.92rem;
+  padding:9px 12px;
+  border:1px solid var(--linea); border-radius:var(--r-sm);
+  background:#fff; color:var(--tinta);
+  width:100%;
+  font-variant-numeric:tabular-nums;
+}
+.campo textarea{ min-height:110px; resize:vertical; line-height:1.5; }
+.campo .pista-campo{ font-size:.72rem; color:var(--tinta-sua); }
+.panel-pie{
+  padding:16px 24px; border-top:1px solid var(--linea-sutil);
+  display:flex; gap:10px; align-items:center; background:var(--papel-2);
+}
+.btn{
+  font-family:var(--texto); font-size:.78rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:.1em;
+  padding:11px 18px; border-radius:999px; border:1px solid transparent; cursor:pointer;
+}
+.btn.primario{ background:var(--rojo); color:#fff; }
+.btn.primario:hover{ background:var(--rojo-osc); }
+.btn.sutil{ background:transparent; color:var(--tinta-med); border-color:var(--linea); }
+.btn.sutil:hover{ background:#fff; }
+.velo{
+  position:fixed; inset:0; z-index:140;
+  background:rgba(43,20,27,.42);
+  backdrop-filter:blur(2px);
+  opacity:0; visibility:hidden;
+  transition:opacity .35s ease, visibility .35s ease;
+}
+.velo.visible{ opacity:1; visibility:visible; }
+
+/* --- Revelado al hacer scroll --- */
+.rev{ opacity:0; transform:translateY(22px); }
+.rev.dentro{
+  opacity:1; transform:none;
+  transition:opacity .85s cubic-bezier(.22,.9,.24,1), transform .85s cubic-bezier(.22,.9,.24,1);
+  transition-delay:var(--d,0ms);
+}
+
+/* --- Adaptable --- */
+@media (max-width:1080px){
+  .hero-grid{ grid-template-columns:1fr; align-items:start; }
+  .brecha-grid{ grid-template-columns:1fr; }
+  .r-5{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .r-4{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:820px){
+  .nav-enlaces{ display:none; }
+  .r-3, .r-5, .fases{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .escalon{ grid-template-columns:1fr; }
+  .cue{ display:none; }
+}
+@media (max-width:620px){
+  .r-2, .r-3, .r-4, .r-5, .fases{ grid-template-columns:1fr; }
+  .antes-despues{ grid-template-columns:1fr; }
+  .hallazgo{ margin-left:30px; }
+  .hallazgo::before{ left:-38px; }
+  .linea-tiempo::before{ left:11px; }
+  .abrir-datos{ right:14px; bottom:14px; padding:11px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .rev{ opacity:1; transform:none; }
+}
+
+@media print{
+  .nav, .barra-progreso, .abrir-datos, .panel-datos, .velo, .cue, #lienzo-hilos{ display:none !important; }
+  body{ background:#fff; }
+  .rev{ opacity:1 !important; transform:none !important; }
+  section{ padding-block:32px; break-inside:avoid; }
+  .franja-oscura{ background:var(--vino-osc) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+<noscript><style>.rev{ opacity:1 !important; transform:none !important; } .abrir-datos, .panel-datos{ display:none !important; }</style></noscript>
+</head>
+<body data-palette="#C3A08D,#F7A8BC,#D01E4B">
+<a class="saltar" href="#objetivo">Saltar al contenido</a>
+<div class="barra-progreso" id="barraProgreso" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Navegación de la presentación">
+  <a class="marca" href="#objetivo">Faji<span>tex</span></a>
+  <div class="nav-enlaces" id="navEnlaces">
+    <a href="#objetivo">Objetivo</a>
+    <a href="#evidencia">Evidencia</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#auditoria">Auditoría</a>
+    <a href="#brecha">Brecha ROAS</a>
+    <a href="#seo">SEO</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#plan">Plan</a>
+    <a href="#decisiones">Decisiones</a>
+  </div>
+</nav>
+
+<!-- ============ 1. OBJETIVO ============ -->
+<header class="hero franja-oscura" id="objetivo">
+  <canvas id="lienzo-hilos" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow claro">Presidencia · Mercadeo Digital y Omnicanalidad · 2026</p>
+        <h1 class="rev">
+          <span class="h1-desde">De <span data-dato="ventaMensualActual" data-fmt="cop" data-pend="completar con dato real: venta mensual actual"></span></span>
+          <em>a $500.000.000 al mes</em>
+        </h1>
+        <p class="hero-sub rev" style="--d:120ms">
+          Primera meta escalonada: <b>$250.000.000 de venta mensual.</b>
+          Las dos cifras son metas de venta del mes, no acumuladas ni anuales.
+        </p>
+        <p class="hero-firma rev" style="--d:220ms">
+          Lo que sigue es el estado real del canal digital, lo que se encontró al auditarlo,
+          lo que ya se corrigió y las palancas concretas que sostienen cada meta.
+        </p>
+      </div>
+
+      <div class="termometro rev" style="--d:300ms">
+        <p class="termometro-titulo">Dónde estamos hoy</p>
+        <div class="pista" role="img" aria-label="Avance de la venta mensual actual frente a las metas de 250 y 500 millones">
+          <span class="pista-relleno" id="pistaRelleno"></span>
+          <span class="pista-hito h1"></span>
+          <span class="pista-hito h2"></span>
+        </div>
+        <div class="pista-escala">
+          <span>0</span><span>$250M</span><span>$500M</span>
+        </div>
+
+        <div class="hitos">
+          <div class="hito-fila">
+            <span class="hito-etiqueta">Hoy <b>Venta mensual</b></span>
+            <span class="hito-valor cifra" data-dato="ventaMensualActual" data-fmt="cop" data-pend="completar con dato real"></span>
+          </div>
+          <div class="hito-fila">
+            <span class="hito-etiqueta">Meta 1 <b>Venta mensual</b></span>
+            <span class="hito-valor cifra">$250.000.000</span>
+          </div>
+          <div class="hito-fila destacado">
+            <span class="hito-etiqueta">Meta final <b>Venta mensual</b></span>
+            <span class="hito-valor cifra">$500.000.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="cue" href="#evidencia">Recorrer<i></i></a>
+</header>
+
+<!-- ============ 2. EVIDENCIA ============ -->
+<section id="evidencia">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">Lo que es cierto y medible</p>
+      <h2 class="h-seccion">Una sola fuente, sin intermediarios</h2>
+      <p class="parrafo">
+        Todo lo de esta sección sale de Shopify, la plataforma donde ocurre la venta.
+        No depende del pixel de Meta, ni de la atribución que reporta la agencia, ni de ningún modelo estadístico.
+        Es la caja registradora del negocio y cualquiera puede abrirla y verificarla.
+      </p>
+      <p style="margin-top:22px"><span class="sello">Verificable en el panel de Shopify</span></p>
+    </div>
+
+    <div class="rejilla r-5 rev" style="--d:100ms">
+      <article class="tarjeta metrica">
+        <p class="etiqueta">Ventas netas</p>
+        <p class="dato cifra" data-dato="shopify.ventasNetas.v" data-fmt="cop" data-pend="completar con dato real"></p>
+        <div class="variaciones">
+          <div class="var-fila"><span>Semana vs anterior</span><span class="chip-var" data-dato="shopify.ventasNetas.sem" data-fmt="delta" data-pend="pendiente"></span></div>
+          <div class="var-fila"><span>Mes vs mismo periodo</span><span class="chip-var" data-dato="shopify.ventasNetas.mes" data-fmt="delta" data-pend="pendiente"></span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta metrica">
+        <p class="etiqueta">Pedidos</p>
+        <p class="dato cifra" data-dato="shopify.pedidos.v" data-fmt="num" data-pend="completar con dato real"></p>
+        <div class="variaciones">
+          <div class="var-fila"><span>Semana vs anterior</span><span class="chip-var" data-dato="shopify.pedidos.sem" data-fmt="delta" data-pend="pendiente"></span></div>
+          <div class="var-fila"><span>Mes vs mismo periodo</span><span class="chip-var" data-dato="shopify.pedidos.mes" data-fmt="delta" data-pend="pendiente"></span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta metrica">
+        <p class="etiqueta">Clientes nuevos</p>
+        <p class="dato cifra" data-dato="shopify.clientesNuevos.v" data-fmt="num" data-pend="completar con dato real"></p>
+        <div class="variaciones">
+          <div class="var-fila"><span>Semana vs anterior</span><span class="chip-var" data-dato="shopify.clientesNuevos.sem" data-fmt="delta" data-pend="pendiente"></span></div>
+          <div class="var-fila"><span>Mes vs mismo periodo</span><span class="chip-var" data-dato="shopify.clientesNuevos.mes" data-fmt="delta" data-pend="pendiente"></span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta metrica destacada">
+        <p class="etiqueta">Ticket promedio</p>
+        <p class="dato cifra" data-dato="shopify.ticketPromedio.v" data-fmt="cop" data-pend="completar con dato real"></p>
+        <div class="variaciones">
+          <div class="var-fila"><span>Semana vs anterior</span><span class="chip-var" data-dato="shopify.ticketPromedio.sem" data-fmt="delta" data-pend="pendiente"></span></div>
+          <div class="var-fila"><span>Mes vs mismo periodo</span><span class="chip-var" data-dato="shopify.ticketPromedio.mes" data-fmt="delta" data-pend="pendiente"></span></div>
+        </div>
+      </article>
+
+      <article class="tarjeta metrica">
+        <p class="etiqueta">Tasa de conversión</p>
+        <p class="dato cifra" data-dato="shopify.conversion.v" data-fmt="pct" data-pend="completar con dato real"></p>
+        <div class="variaciones">
+          <div class="var-fila"><span>Semana vs anterior</span><span class="chip-var" data-dato="shopify.conversion.sem" data-fmt="delta" data-pend="pendiente"></span></div>
+          <div class="var-fila"><span>Mes vs mismo periodo</span><span class="chip-var" data-dato="shopify.conversion.mes" data-fmt="delta" data-pend="pendiente"></span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tarjeta rev" style="--d:180ms; margin-top:clamp(20px,2vw,28px); border-left:3px solid var(--rojo); background:linear-gradient(120deg,#fff 60%, var(--papel-2));">
+      <p class="etiqueta" style="color:var(--rojo)">La señal que más importa</p>
+      <h3 class="h-tarjeta" style="font-size:1.15rem">El ticket promedio crece de forma sostenida</h3>
+      <p class="apunte" style="max-width:82ch; font-size:.95rem">
+        Subir pedidos es relativamente fácil, basta con descuento y volumen.
+        Subir el ticket promedio mientras suben los pedidos significa otra cosa: el cliente que está entrando
+        compra más por compra, elige mejor y responde a la propuesta de valor, no solo al precio.
+        Es la evidencia de que la captación está trayendo mejor cliente, no simplemente más tráfico,
+        y es la base sobre la que se puede escalar inversión sin destruir margen.
+      </p>
+    </div>
+
+    <p class="nota-pie rev" style="margin-top:24px">
+      Comparativos: semana en curso contra la semana inmediatamente anterior, y mes en curso contra el mismo
+      periodo del mes anterior, para evitar comparar meses incompletos con meses cerrados.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 3. DIAGNÓSTICO ============ -->
+<section id="diagnostico" class="franja-nude">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">Diagnóstico heredado</p>
+      <h2 class="h-seccion">El punto de partida real del canal</h2>
+      <p class="parrafo">
+        Este es el estado que tenía el canal digital al asumir el rol. No es un balance de gestión,
+        es la línea base contra la que se mide todo lo que viene después.
+        Cada cifra sale de la propia plataforma donde se genera.
+      </p>
+    </div>
+
+    <div class="rejilla r-3 rev" style="--d:80ms">
+      <article class="tarjeta diag">
+        <p class="severidad">Crítico</p>
+        <h3 class="h-tarjeta">Conversión web en caída</h3>
+        <div class="trayecto">
+          <span class="de">4,12%</span>
+          <span class="flecha">→</span>
+          <span class="a">1,66% a 2,42%</span>
+        </div>
+        <p class="apunte">
+          De los picos alcanzados en 2025 a los rangos en que se mueve el sitio en 2026.
+          La conversión se redujo a menos de la mitad de su mejor momento, con el mismo catálogo.
+        </p>
+      </article>
+
+      <article class="tarjeta diag">
+        <p class="severidad">Crítico</p>
+        <h3 class="h-tarjeta">Abandono de carrito</h3>
+        <p class="dato cifra" style="color:var(--rojo-osc)">82,5%</p>
+        <p class="apunte">
+          De cada diez personas que agregan producto al carrito, ocho salen sin comprar.
+          Es demanda ya calificada que el sitio no logra cerrar y que hoy nadie recupera de forma automática.
+        </p>
+      </article>
+
+      <article class="tarjeta diag">
+        <p class="severidad">Crítico</p>
+        <h3 class="h-tarjeta">Categorías que no convierten</h3>
+        <p class="dato cifra" style="color:var(--rojo-osc)">0%</p>
+        <p class="apunte">
+          Categorías completas de producto con conversión en cero. No es un problema de demanda,
+          es un problema de navegación, de ficha de producto y de indexación que se puede intervenir.
+        </p>
+      </article>
+
+      <article class="tarjeta diag">
+        <p class="severidad">Crítico</p>
+        <h3 class="h-tarjeta">Meta Pixel ciego</h3>
+        <p class="dato cifra" style="color:var(--rojo-osc)">47% a 55%</p>
+        <p class="apunte">
+          Es la porción de los ingresos reales que el pixel alcanzaba a capturar.
+          Casi la mitad de la venta ocurría sin que la plataforma de pauta la viera,
+          así que las decisiones de inversión se tomaban sobre información incompleta.
+        </p>
+      </article>
+
+      <article class="tarjeta diag medio">
+        <p class="severidad">Alto</p>
+        <h3 class="h-tarjeta">Email marketing sin base sana</h3>
+        <div class="trayecto">
+          <span class="a" style="font-size:2rem">79%</span>
+          <span class="de" style="font-size:1rem">rebote</span>
+          <span class="a" style="font-size:2rem">9,66%</span>
+          <span class="de" style="font-size:1rem">apertura</span>
+        </div>
+        <p class="apunte">
+          Con ese nivel de rebote el problema no es el contenido del correo, es la calidad de la base
+          y la reputación del remitente. Sin higiene de base, ninguna automatización rinde.
+        </p>
+      </article>
+
+      <article class="tarjeta diag medio" style="background:linear-gradient(150deg,#fff,var(--papel-2))">
+        <p class="severidad">Lectura</p>
+        <h3 class="h-tarjeta">Qué significa el conjunto</h3>
+        <p class="apunte">
+          No son cinco problemas sueltos. Es una cadena: se mide mal, entonces se invierte mal,
+          entonces el sitio no convierte, entonces la base no se recupera.
+          Por eso la primera intervención fue la medición. Sin números confiables,
+          cualquier aumento de inversión amplifica el error en lugar de corregirlo.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. AUDITORÍA ============ -->
+<section id="auditoria">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">La auditoría de tracking</p>
+      <h2 class="h-seccion">Lo que se encontró y lo que ya está corregido</h2>
+      <p class="parrafo">
+        Antes de pedir un peso más de inversión había que responder una pregunta:
+        ¿los números con los que se decide son ciertos? La auditoría de medición dio cuatro hallazgos.
+        Ninguno depende de la palabra de un tercero, todos son verificables en las plataformas.
+      </p>
+    </div>
+
+    <div class="linea-tiempo">
+      <article class="hallazgo rev">
+        <div class="hallazgo-cab">
+          <h3>El dominio del widget rompía la atribución de cada venta</h3>
+          <span class="estado ok">Corregido</span>
+        </div>
+        <div class="antes-despues">
+          <div class="ad-celda">
+            <p class="ad-titulo">Antes</p>
+            <p class="ad-texto">
+              Un dominio de widget de terceros cargado en el sitio se registraba como fuente de tráfico.
+              La sesión perdía su origen real y la venta quedaba atribuida a ese dominio,
+              no a la campaña, al buscador o al correo que de verdad la trajo.
+            </p>
+          </div>
+          <div class="ad-celda despues">
+            <p class="ad-titulo">Después</p>
+            <p class="ad-texto">
+              El dominio quedó excluido de la lista de referencias, de forma que la sesión conserva su origen
+              hasta el momento de la compra. La atribución vuelve a apuntar al canal que generó la venta.
+            </p>
+          </div>
+        </div>
+        <p class="impacto">
+          <b>Impacto:</b> mientras estuvo activo, una porción de las ventas se le acreditaba a un canal inexistente,
+          lo que restaba resultado visible a los canales que sí estaban trayendo venta.
+          <span class="pend">completar con dato real: nombre del widget y fecha exacta de la corrección</span>
+        </p>
+      </article>
+
+      <article class="hallazgo rev">
+        <div class="hallazgo-cab">
+          <h3>Las campañas de Meta llegaban sin marcado consistente</h3>
+          <span class="estado ok">Corregido</span>
+        </div>
+        <div class="antes-despues">
+          <div class="ad-celda">
+            <p class="ad-titulo">Antes</p>
+            <p class="ad-texto">
+              Sin una plantilla común de UTM, cada campaña llegaba marcada de forma distinta o sin marcar.
+              Era imposible separar en Shopify y en GA4 qué campaña, qué conjunto y qué anuncio trajo cada venta.
+            </p>
+          </div>
+          <div class="ad-celda despues">
+            <p class="ad-titulo">Después</p>
+            <p class="ad-texto">
+              Se implementó una plantilla única de UTM con parámetros dinámicos a nivel de cuenta:
+              campaña, conjunto, anuncio, ubicación e identificador. Cada clic llega identificado
+              y se puede rastrear hasta el pedido.
+            </p>
+          </div>
+        </div>
+        <p class="impacto">
+          <b>Impacto:</b> es la condición mínima para poder comparar lo que reporta la plataforma de pauta
+          con lo que efectivamente se vendió. Sin esto, cualquier discusión sobre ROAS es una discusión de fe.
+        </p>
+      </article>
+
+      <article class="hallazgo rev">
+        <div class="hallazgo-cab">
+          <h3>Tráfico pagado que se contabilizaba como directo u orgánico</h3>
+          <span class="estado proceso">En corrección</span>
+        </div>
+        <div class="antes-despues">
+          <div class="ad-celda">
+            <p class="ad-titulo">Antes</p>
+            <p class="ad-texto">
+              Todo el tráfico que llega sin UTM cae en las bolsas de directo u orgánico.
+              Enlaces en biografía, mensajes, colaboraciones y piezas sin marcar entraban ahí,
+              de modo que el canal pagado se veía más pequeño de lo que realmente es.
+            </p>
+          </div>
+          <div class="ad-celda despues">
+            <p class="ad-titulo">En curso</p>
+            <p class="ad-texto">
+              Marcado sistemático de todo punto de contacto que se pueda controlar,
+              con convención única de nomenclatura, para que cada canal cargue con la venta que genera
+              y ninguno se infle a costa de otro.
+            </p>
+          </div>
+        </div>
+        <p class="impacto">
+          <b>Impacto:</b> mientras exista tráfico sin marcar, orgánico y directo aparecen sobrevalorados
+          y el desempeño de la pauta queda subestimado. Es una distorsión que afecta las dos direcciones de la decisión.
+        </p>
+      </article>
+
+      <article class="hallazgo abierto rev">
+        <div class="hallazgo-cab">
+          <h3>Limitación estructural del checkout de Shopify</h3>
+          <span class="estado investigacion">En investigación</span>
+        </div>
+        <div class="antes-despues">
+          <div class="ad-celda">
+            <p class="ad-titulo">La restricción</p>
+            <p class="ad-texto">
+              El checkout de Shopify es un entorno cerrado. La plataforma limita qué scripts de terceros
+              pueden ejecutarse en el último paso de la compra, justo donde ocurre la conversión que se quiere medir.
+            </p>
+          </div>
+          <div class="ad-celda despues">
+            <p class="ad-titulo">Consecuencia</p>
+            <p class="ad-texto">
+              Ninguna herramienta externa puede reconstruir con total exactitud lo que pasa en el checkout.
+              Es un techo de la plataforma, no un error de configuración, y define hasta dónde puede llegar
+              la medición de terceros por más que se ajuste.
+            </p>
+          </div>
+        </div>
+        <p class="impacto">
+          <b>Impacto y decisión pendiente:</b> resolverlo exige evaluar el plan de la plataforma
+          y las alternativas de medición del lado del servidor. Es el punto donde la corrección técnica
+          deja de depender solo del equipo y pasa a requerir una decisión de inversión.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. BRECHA DE ROAS ============ -->
+<section id="brecha" class="franja-oscura">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow claro">La brecha descubierta</p>
+      <h2 class="h-seccion">Cuando dos fuentes que no se hablan dicen lo mismo</h2>
+      <p class="parrafo ancho">
+        Comparación de las campañas de conversión web de <b id="mesBrecha" style="color:var(--sobre-vino)">agosto</b>:
+        lo que se invirtió, el valor de conversión que reporta la agencia y los ingresos que se pueden verificar
+        de forma independiente cruzando Google Analytics 4 con Shopify.
+      </p>
+    </div>
+
+    <div class="brecha-grid">
+      <div class="panel-grafico rev" style="--d:80ms">
+        <div class="lienzo-caja">
+          <canvas id="graficoBrecha" aria-label="Comparación entre inversión, valor de conversión reclamado por la agencia e ingresos verificados en GA4 y Shopify" role="img"></canvas>
+          <div class="sin-datos" id="sinDatosBrecha" hidden>
+            <span class="pend">completar con dato real</span>
+            <p>Inversión, valor de conversión reclamado e ingresos verificados en GA4 y en Shopify.
+               Abra el panel de datos para cargar las cifras del mes y el gráfico se dibuja al instante.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lectura rev" style="--d:160ms">
+        <h3>El hallazgo de convergencia</h3>
+        <p>
+          Google Analytics 4 y Shopify miden de maneras distintas, con tecnologías distintas y sin compartir fuente.
+          Cuando dos sistemas independientes coinciden casi exactamente entre sí, y ambos quedan muy por debajo
+          de lo que reporta un tercero, la explicación más simple deja de ser un problema de atribución.
+        </p>
+        <p>
+          Esa coincidencia es la evidencia más fuerte de la presentación: no se trata de la palabra del equipo
+          contra la palabra de la agencia, se trata de dos mediciones que no tienen forma de ponerse de acuerdo
+          y aun así llegan al mismo número.
+        </p>
+        <div class="roas-par">
+          <span class="roas-chip">ROAS reclamado <b id="roasReclamado">pendiente</b></span>
+          <span class="roas-chip">ROAS verificado <b id="roasVerificado">pendiente</b></span>
+        </div>
+        <div class="marcador-brecha">
+          <span class="cifra" id="brechaValor">pendiente</span>
+          <span class="etiqueta">Diferencia entre lo reclamado y lo verificado</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="nota-pie claro rev" style="margin-top:26px">
+      Alcance: campañas de conversión web del periodo indicado, no la cuenta completa.
+      Verificación en curso, cifras sujetas a actualización. Los valores verificados corresponden al cruce
+      de las dos fuentes independientes, no a una estimación del equipo.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 6. SEO ============ -->
+<section id="seo">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">SEO y GEO</p>
+      <h2 class="h-seccion">La oportunidad que ya está identificada</h2>
+      <p class="parrafo">
+        La pauta compra tráfico mientras se paga. El posicionamiento lo construye una vez y lo sostiene.
+        Hoy hay demanda buscando fajas y shapewear que el sitio ya casi alcanza y no está capturando.
+      </p>
+    </div>
+
+    <div class="rejilla r-3 rev" style="--d:80ms; margin-bottom:clamp(24px,3vw,40px)">
+      <article class="tarjeta">
+        <p class="etiqueta">Indexación actual del sitio</p>
+        <p class="dato cifra" data-dato="seo.indexadas" data-fmt="num" data-pend="completar con dato real"></p>
+        <p class="apunte">
+          Páginas indexadas de <span data-dato="seo.totales" data-fmt="num" data-pend="completar con dato real"></span> publicadas.
+          Lo que no está indexado no existe para el buscador, por bueno que sea el producto.
+        </p>
+        <div class="medidor"><i id="medidorIndexacion"></i></div>
+      </article>
+
+      <article class="tarjeta">
+        <p class="etiqueta">Catálogo con tráfico casi nulo</p>
+        <p class="dato cifra" data-dato="seo.pctSinTrafico" data-fmt="pct0" data-pend="completar con dato real"></p>
+        <p class="apunte">
+          Porcentaje de las fichas de producto que no recibieron tráfico relevante en los últimos meses.
+          Es inventario ya fotografiado, descrito y cargado, trabajando a cero.
+        </p>
+        <div class="medidor"><i id="medidorCatalogo"></i></div>
+      </article>
+
+      <article class="tarjeta" style="background:linear-gradient(150deg,#fff,var(--papel-2))">
+        <p class="etiqueta">Por qué importa ahora</p>
+        <h3 class="h-tarjeta">Tráfico que no depende del presupuesto del mes</h3>
+        <p class="apunte">
+          Cada punto de conversión que se recupera por posicionamiento baja el costo de adquisición
+          de todo el canal, incluida la pauta. Es la palanca que sostiene la meta cuando la inversión se estabiliza,
+          y la única que sigue trabajando si un mes hay que recortar.
+        </p>
+      </article>
+    </div>
+
+    <div class="panel-grafico claro rev" style="--d:120ms">
+      <p class="etiqueta" style="font-size:.68rem; font-weight:600; text-transform:uppercase; letter-spacing:.15em; color:var(--tinta-sua); margin-bottom:6px">
+        Palabras clave de alto volumen ya cerca de la primera página
+      </p>
+      <p class="nota-pie" style="margin-bottom:18px">
+        Posición actual en el buscador. Menos es mejor, la primera página termina en la posición 10.
+        Son las que se pueden capturar con contenido dirigido, sin empezar de cero.
+      </p>
+      <div class="lienzo-caja baja">
+        <canvas id="graficoSeo" aria-label="Posición actual de las palabras clave de alto volumen frente al límite de la primera página" role="img"></canvas>
+        <div class="sin-datos" id="sinDatosSeo" hidden>
+          <span class="pend">completar con dato real</span>
+          <p>Palabras clave, posición actual y volumen mensual de búsqueda.
+             Se cargan desde el panel de datos, una por línea.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fases rev" style="--d:160ms; margin-top:clamp(28px,3vw,44px)">
+      <article class="fase">
+        <span class="fase-num">01</span>
+        <h3>Base técnica e indexación</h3>
+        <ul>
+          <li>Resolver las páginas que hoy no están indexadas</li>
+          <li>Corregir canónicas, duplicados y arquitectura de categorías</li>
+          <li>Velocidad de carga y experiencia en móvil</li>
+          <li>Ejecuta con el Webmaster</li>
+        </ul>
+      </article>
+      <article class="fase">
+        <span class="fase-num">02</span>
+        <h3>Contenido sobre la demanda que ya existe</h3>
+        <ul>
+          <li>Atacar primero las palabras clave que ya están cerca de la primera página</li>
+          <li>Reescribir categorías y fichas de producto con intención de búsqueda</li>
+          <li>Activar el catálogo que hoy está en cero</li>
+          <li>Lidera Mercadeo Digital</li>
+        </ul>
+      </article>
+      <article class="fase">
+        <span class="fase-num">03</span>
+        <h3>Autoridad y visibilidad en respuestas de IA</h3>
+        <ul>
+          <li>Contenido de marca y guías de talla y uso</li>
+          <li>Datos estructurados para que el catálogo sea legible por buscadores y por modelos de IA</li>
+          <li>Menciones y enlaces de terceros</li>
+          <li>Lidera Mercadeo Digital con apoyo del Webmaster</li>
+        </ul>
+      </article>
+    </div>
+    <p class="nota-pie rev" style="margin-top:20px">
+      Fechas de inicio y metas de tráfico por fase: <span class="pend">completar con dato real</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 7. EQUIPO ============ -->
+<section id="equipo" class="franja-nude">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">El equipo que lo ejecuta</p>
+      <h2 class="h-seccion">Tres roles, una sola cadena de conversión</h2>
+      <p class="parrafo">
+        La meta no la sostiene un área sola. El tráfico lo trae mercadeo digital, el sitio lo tiene que cerrar
+        el desarrollo técnico y la base la tiene que recuperar y fidelizar marketing relacional.
+        Si un eslabón falla, los otros dos pagan el costo.
+      </p>
+    </div>
+
+    <div class="rejilla r-3 rev" style="--d:80ms">
+      <article class="rol mio">
+        <div>
+          <p class="rol-quien">Mi rol</p>
+          <p class="rol-cargo">Coordinación de Mercadeo Digital y Omnicanalidad</p>
+        </div>
+        <p class="rol-aporte">
+          Pauta, atribución, SEO y GEO, y la estrategia general del canal.
+          Responde por que cada peso invertido sea medible y por que el crecimiento sea explicable.
+        </p>
+        <div class="rol-bloque">
+          <p class="ad-titulo">Hoy</p>
+          <ul>
+            <li>Auditoría de medición y corrección de la atribución</li>
+            <li>Plantilla única de UTM y convención de marcado por canal</li>
+            <li>Verificación independiente del desempeño de la pauta</li>
+            <li>Plan de SEO y GEO en tres fases</li>
+            <li>Seguimiento semanal contra Shopify como fuente única</li>
+          </ul>
+        </div>
+        <div class="rol-bloque falta">
+          <p class="ad-titulo">Falta por resolver</p>
+          <ul>
+            <li>Cerrar la verificación de la brecha con la agencia</li>
+            <li>Definir el escenario de medición del lado del servidor</li>
+            <li>Escalar inversión solo cuando la atribución sea confiable</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="rol">
+        <div>
+          <p class="rol-quien" style="color:#33525F">Soporte técnico del canal</p>
+          <p class="rol-cargo">Webmaster</p>
+        </div>
+        <p class="rol-aporte">
+          Corrección técnica del sitio, checkout, velocidad y arquitectura de indexación.
+          Es quien convierte el diagnóstico en un sitio que efectivamente cierra la venta.
+        </p>
+        <div class="rol-bloque">
+          <p class="ad-titulo">Hoy</p>
+          <ul>
+            <li>Correcciones sobre la experiencia de compra y la ficha de producto</li>
+            <li>Implementación de los ajustes de medición en el sitio</li>
+            <li>Trabajo sobre las categorías que hoy convierten en cero</li>
+          </ul>
+        </div>
+        <div class="rol-bloque falta">
+          <p class="ad-titulo">Falta por resolver</p>
+          <ul>
+            <li>Limitación del checkout, requiere decisión de plataforma</li>
+            <li>Velocidad de carga y experiencia en móvil</li>
+            <li>Indexación del catálogo que hoy no aparece en el buscador</li>
+            <li>Reducción del abandono de carrito del 82,5% desde el lado del sitio</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="rol">
+        <div>
+          <p class="rol-quien" style="color:var(--ok)">Recuperación y fidelización</p>
+          <p class="rol-cargo">Coordinación de Marketing Relacional</p>
+        </div>
+        <p class="rol-aporte">
+          Email, automatizaciones de carrito y checkout abandonado, fidelización y recuperación de la base.
+          Es el rol que convierte en venta la demanda que el sitio ya generó y perdió.
+        </p>
+        <div class="rol-bloque">
+          <p class="ad-titulo">Hoy</p>
+          <ul>
+            <li><span class="pend">completar con dato real: flujos activos y estado de la higiene de base</span></li>
+            <li><span class="pend">completar con dato real: ingresos atribuidos a email en el último mes</span></li>
+          </ul>
+        </div>
+        <div class="rol-bloque falta">
+          <p class="ad-titulo">Falta por resolver</p>
+          <ul>
+            <li>Bajar el rebote del 79% con limpieza y validación de la base</li>
+            <li>Subir la apertura desde el 9,66% actual</li>
+            <li>Automatizaciones de carrito y checkout abandonado sobre el 82,5% que hoy se pierde</li>
+            <li><span class="pend">completar con dato real: metas y fechas comprometidas del área</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. PLAN ============ -->
+<section id="plan">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">Plan escalonado</p>
+      <h2 class="h-seccion">Cómo se llega a $500.000.000 al mes</h2>
+      <p class="parrafo">
+        No es un salto, es una secuencia. Cada hito se sostiene sobre palancas concretas
+        y cada palanca tiene un responsable. Todas las cifras son de venta mensual.
+      </p>
+    </div>
+
+    <div class="escalera">
+      <article class="escalon e1 rev">
+        <div class="escalon-meta">
+          <p class="etiqueta">Hito 1</p>
+          <span class="cifra">$250.000.000</span>
+          <span class="mensual">Meta mensual</span>
+        </div>
+        <div class="palancas">
+          <div class="palanca">
+            <p><b>Medición corregida y atribución confiable.</b> Saber qué campaña vende de verdad
+               para poder mover presupuesto con criterio y dejar de pagar por resultado que no existe.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+          <div class="palanca">
+            <p><b>Resolución del checkout y recuperación de la conversión web.</b> Volver a los niveles
+               de conversión de 2025 y activar las categorías que hoy están en cero.</p>
+            <span class="lider wm">Webmaster</span>
+          </div>
+          <div class="palanca">
+            <p><b>Automatizaciones de carrito y checkout abandonado.</b> Recuperar parte del 82,5%
+               de carritos que hoy se pierden sin que nadie los persiga.</p>
+            <span class="lider mr">Marketing Relacional</span>
+          </div>
+          <div class="palanca">
+            <p><b>Arranque del plan SEO.</b> Base técnica, indexación del catálogo y las palabras clave
+               que ya están cerca de la primera página.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="escalon e2 rev">
+        <div class="escalon-meta">
+          <p class="etiqueta">Hito intermedio</p>
+          <span class="cifra" data-dato="hitoIntermedio" data-fmt="cop" data-pend="completar con dato real si existe"></span>
+          <span class="mensual">Meta mensual</span>
+        </div>
+        <div class="palancas">
+          <div class="palanca">
+            <p><b>Escalamiento controlado de la inversión.</b> Subir presupuesto solo sobre las campañas
+               cuyo retorno quedó verificado de forma independiente, no sobre el reportado.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+          <div class="palanca">
+            <p><b>SEO en fase de contenido.</b> Las palabras clave cercanas a la primera página
+               empiezan a traer tráfico que no depende del presupuesto del mes.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+          <div class="palanca">
+            <p><b>Base de datos sana y flujos en operación.</b> Rebote y apertura en rangos de mercado,
+               con ingresos recurrentes atribuibles al canal propio.</p>
+            <span class="lider mr">Marketing Relacional</span>
+          </div>
+          <div class="palanca">
+            <p><b>Cifra objetivo y fecha de este hito:</b> <span class="pend">completar con dato real si existe</span></p>
+            <span class="lider">Por definir</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="escalon e3 rev">
+        <div class="escalon-meta">
+          <p class="etiqueta">Meta final</p>
+          <span class="cifra">$500.000.000</span>
+          <span class="mensual">Meta mensual</span>
+        </div>
+        <div class="palancas">
+          <div class="palanca">
+            <p><b>Escalamiento de pauta con atribución confiable.</b> Invertir más sabiendo exactamente
+               qué devuelve cada peso, con la relación con la agencia renegociada sobre resultado verificado.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+          <div class="palanca">
+            <p><b>Conversión web recuperada y sostenida.</b> El sitio cerrando la venta que ya está trayendo,
+               con checkout resuelto y catálogo completo trabajando.</p>
+            <span class="lider wm">Webmaster</span>
+          </div>
+          <div class="palanca">
+            <p><b>Canal B2B.</b> Distribuidoras y venta mayorista como línea de ingreso adicional,
+               con su propia captación y su propio proceso.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+          <div class="palanca">
+            <p><b>Automatizaciones de fidelización.</b> Recompra y valor de vida del cliente,
+               el ingreso que no hay que volver a comprar cada mes.</p>
+            <span class="lider mr">Marketing Relacional</span>
+          </div>
+          <div class="palanca">
+            <p><b>Posicionamiento consolidado.</b> Tráfico orgánico y visibilidad en respuestas de IA
+               sosteniendo la base del canal.</p>
+            <span class="lider md">Mercadeo Digital</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CIERRE ============ -->
+<section id="decisiones" class="franja-oscura">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow claro">Próximos pasos</p>
+      <h2 class="h-seccion">Lo que se necesita de Presidencia</h2>
+      <p class="parrafo ancho">
+        El equipo puede ejecutar la corrección técnica, el plan de contenido y la operación diaria.
+        Estos cinco puntos están por encima del alcance del cargo y requieren decisión de Presidencia
+        para poder avanzar.
+      </p>
+    </div>
+
+    <ul class="lista-decisiones rev" style="--d:80ms">
+      <li class="decision">
+        <input type="checkbox" id="d1" class="marca-decision">
+        <label for="d1">
+          <span class="d-titulo">Aprobación del presupuesto de pauta para escalar</span>
+          <span class="d-detalle">
+            Escalar solo sobre campañas con retorno verificado de forma independiente.
+            Monto mensual solicitado y campañas incluidas: <span class="pend">completar con dato real</span>
+          </span>
+        </label>
+      </li>
+      <li class="decision">
+        <input type="checkbox" id="d2" class="marca-decision">
+        <label for="d2">
+          <span class="d-titulo">Validación de la renegociación con la agencia de pauta</span>
+          <span class="d-detalle">
+            Presentar la brecha verificada y redefinir el acuerdo sobre resultado comprobable en Shopify,
+            no sobre valor de conversión reportado por la propia plataforma de pauta.
+            Alcance de la renegociación: <span class="pend">completar con dato real</span>
+          </span>
+        </label>
+      </li>
+      <li class="decision">
+        <input type="checkbox" id="d3" class="marca-decision">
+        <label for="d3">
+          <span class="d-titulo">Decisión sobre la plataforma para desbloquear el checkout</span>
+          <span class="d-detalle">
+            Es la única forma de cerrar la limitación estructural de medición y de intervenir a fondo
+            el paso donde hoy se pierde la venta. Costo y opción recomendada: <span class="pend">completar con dato real</span>
+          </span>
+        </label>
+      </li>
+      <li class="decision">
+        <input type="checkbox" id="d4" class="marca-decision">
+        <label for="d4">
+          <span class="d-titulo">Recursos para el plan de SEO, contenido y GEO</span>
+          <span class="d-detalle">
+            Producción de contenido, fichas de producto y datos estructurados para activar el catálogo
+            que hoy trabaja a cero. Recurso requerido: <span class="pend">completar con dato real</span>
+          </span>
+        </label>
+      </li>
+      <li class="decision">
+        <input type="checkbox" id="d5" class="marca-decision">
+        <label for="d5">
+          <span class="d-titulo">Aprobación del canal B2B y de la fecha de corte del primer hito</span>
+          <span class="d-detalle">
+            Definir alcance y responsable del canal mayorista, y fijar la fecha en que se evalúa
+            el hito de $250.000.000 de venta mensual para poder medir el avance con una regla acordada.
+          </span>
+        </label>
+      </li>
+    </ul>
+
+    <div class="cierre-final rev" style="--d:140ms">
+      <p class="frase">
+        Primero se corrigió la forma de medir. Ahora se puede crecer sabiendo exactamente sobre qué.
+      </p>
+      <p class="nota-pie claro" style="max-width:34ch">
+        Coordinación de Mercadeo Digital y Omnicanalidad, Fajitex.
+        Documento de trabajo para Presidencia. Las cifras resaltadas en amarillo están pendientes de completar
+        y ninguna de ellas fue estimada.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL DE DATOS ============ -->
+<button class="abrir-datos" id="abrirDatos" type="button" aria-expanded="false" aria-controls="panelDatos">
+  <span class="punto" aria-hidden="true"></span> Completar datos
+</button>
+<div class="velo" id="velo" hidden></div>
+
+<aside class="panel-datos" id="panelDatos" aria-hidden="true" aria-label="Panel para completar los datos reales">
+  <div class="panel-cab">
+    <div>
+      <h2>Completar datos</h2>
+      <p>Las cifras se guardan en este navegador y actualizan la página y los gráficos al instante.</p>
+    </div>
+    <button class="cerrar-panel" id="cerrarPanel" type="button" aria-label="Cerrar el panel de datos">✕</button>
+  </div>
+  <div class="panel-cuerpo" id="panelCuerpo"></div>
+  <div class="panel-pie">
+    <button class="btn primario" id="guardarDatos" type="button">Guardar y actualizar</button>
+    <button class="btn sutil" id="limpiarDatos" type="button">Vaciar todo</button>
+  </div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* ==========================================================
+     1. DATOS
+     Los valores en null se muestran como dato pendiente y se
+     resaltan en amarillo. Se pueden llenar aquí directamente
+     o desde el panel "Completar datos" de la página.
+     ========================================================== */
+  const DATOS_BASE = {
+    ventaMensualActual: null,          // venta mensual en pesos
+    meta1: 250000000,
+    metaFinal: 500000000,
+    hitoIntermedio: null,              // meta mensual del hito intermedio
+    shopify: {
+      ventasNetas:    { v:null, sem:null, mes:null },
+      pedidos:        { v:null, sem:null, mes:null },
+      clientesNuevos: { v:null, sem:null, mes:null },
+      ticketPromedio: { v:null, sem:null, mes:null },
+      conversion:     { v:null, sem:null, mes:null }
+    },
+    roas: {
+      mes: "agosto",
+      inversion: null,                 // inversión total en campañas de conversión web
+      reclamado: null,                 // valor de conversión que reporta la agencia
+      ga4: null,                       // ingresos verificados en GA4
+      shopify: null                    // ingresos verificados en Shopify
+    },
+    seo: {
+      indexadas: null,
+      totales: null,
+      pctSinTrafico: null,
+      keywords: []                     // { kw, pos, vol }
+    }
+  };
+
+  const LLAVE = "fajitex-presidencia-datos";
+  const LLAVE_CHECK = "fajitex-presidencia-decisiones";
+
+  const clonar = (o) => JSON.parse(JSON.stringify(o));
+  let DATOS = clonar(DATOS_BASE);
+
+  function fundir(destino, origen){
+    if(!origen || typeof origen !== "object") return destino;
+    Object.keys(origen).forEach(k => {
+      const v = origen[k];
+      if(v && typeof v === "object" && !Array.isArray(v) && destino[k] && typeof destino[k] === "object"){
+        fundir(destino[k], v);
+      } else if(v !== undefined){
+        destino[k] = v;
+      }
+    });
+    return destino;
+  }
+
+  function cargarGuardado(){
+    try{
+      const crudo = localStorage.getItem(LLAVE);
+      if(crudo) fundir(DATOS, JSON.parse(crudo));
+    }catch(e){ /* almacenamiento no disponible */ }
+  }
+  function guardar(){
+    try{ localStorage.setItem(LLAVE, JSON.stringify(DATOS)); }catch(e){}
+  }
+
+  const leerRuta = (ruta) => ruta.split(".").reduce((o,k) => (o == null ? undefined : o[k]), DATOS);
+  function escribirRuta(ruta, valor){
+    const partes = ruta.split(".");
+    const ultima = partes.pop();
+    const obj = partes.reduce((o,k) => (o[k] = o[k] || {}), DATOS);
+    obj[ultima] = valor;
+  }
+
+  /* ==========================================================
+     2. FORMATO
+     ========================================================== */
+  const nf = (min,max) => new Intl.NumberFormat("es-CO", { minimumFractionDigits:min, maximumFractionDigits:max });
+  const entero = nf(0,0);
+  const dosDec = nf(2,2);
+  const unDec  = nf(0,1);
+
+  function formatear(valor, fmt){
+    if(valor === null || valor === undefined || Number.isNaN(valor)) return null;
+    switch(fmt){
+      case "cop":   return "$" + entero.format(Math.round(valor));
+      case "num":   return entero.format(Math.round(valor));
+      case "pct":   return dosDec.format(valor) + "%";
+      case "pct0":  return entero.format(Math.round(valor)) + "%";
+      case "delta": return (valor > 0 ? "+" : "") + unDec.format(valor) + "%";
+      default:      return String(valor);
+    }
+  }
+  const copCorto = (v) => {
+    if(v >= 1000000) return "$" + unDec.format(v/1000000) + "M";
+    if(v >= 1000)    return "$" + entero.format(v/1000) + "k";
+    return "$" + entero.format(v);
+  };
+
+  /* ==========================================================
+     3. PINTAR VALORES
+     ========================================================== */
+  const reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const facil = (t) => 1 - Math.pow(1 - t, 4);
+
+  function animarCifra(el, valor, fmt){
+    if(reducir){ el.textContent = formatear(valor, fmt); return; }
+    const inicio = performance.now();
+    const dur = 1150;
+    function paso(ahora){
+      const t = Math.min(1, (ahora - inicio) / dur);
+      el.textContent = formatear(valor * facil(t), fmt);
+      if(t < 1) requestAnimationFrame(paso);
+      else el.textContent = formatear(valor, fmt);
+    }
+    requestAnimationFrame(paso);
+  }
+
+  function pintarValores(){
+    document.querySelectorAll("[data-dato]").forEach(el => {
+      const valor = leerRuta(el.dataset.dato);
+      const fmt = el.dataset.fmt || "num";
+      el.dataset.listo = "";
+      if(valor === null || valor === undefined || valor === ""){
+        const texto = el.dataset.pend || "completar con dato real";
+        el.innerHTML = '<span class="pend">' + texto + "</span>";
+        el.classList.remove("sube","baja");
+        return;
+      }
+      if(fmt === "delta"){
+        el.textContent = formatear(valor, fmt);
+        el.classList.toggle("sube", valor > 0);
+        el.classList.toggle("baja", valor < 0);
+        return;
+      }
+      el.textContent = formatear(0, fmt);
+      el.dataset.listo = "no";
+      el.dataset.valor = valor;
+    });
+    // los contadores arrancan cuando entran en pantalla
+    document.querySelectorAll('[data-listo="no"]').forEach(el => obsContador.observe(el));
+  }
+
+  const obsContador = new IntersectionObserver((entradas) => {
+    entradas.forEach(e => {
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      obsContador.unobserve(el);
+      if(el.dataset.listo !== "no") return;
+      el.dataset.listo = "si";
+      animarCifra(el, parseFloat(el.dataset.valor), el.dataset.fmt || "num");
+    });
+  }, { threshold:.4 });
+
+  function pintarMedidores(){
+    const relleno = document.getElementById("pistaRelleno");
+    const actual = DATOS.ventaMensualActual;
+    const pct = actual ? Math.max(2, Math.min(100, (actual / DATOS.metaFinal) * 100)) : 0;
+    requestAnimationFrame(() => { relleno.style.width = pct + "%"; });
+
+    const idx = document.getElementById("medidorIndexacion");
+    const pIdx = (DATOS.seo.indexadas && DATOS.seo.totales)
+      ? Math.max(2, Math.min(100, (DATOS.seo.indexadas / DATOS.seo.totales) * 100)) : 0;
+    const cat = document.getElementById("medidorCatalogo");
+    const pCat = DATOS.seo.pctSinTrafico ? Math.max(2, Math.min(100, DATOS.seo.pctSinTrafico)) : 0;
+    requestAnimationFrame(() => { idx.style.width = pIdx + "%"; cat.style.width = pCat + "%"; });
+  }
+
+  function pintarBrecha(){
+    const r = DATOS.roas;
+    document.getElementById("mesBrecha").textContent = r.mes || "el periodo analizado";
+    const verificado = (r.ga4 != null && r.shopify != null) ? (r.ga4 + r.shopify) / 2
+                     : (r.ga4 != null ? r.ga4 : r.shopify);
+    const elRec = document.getElementById("roasReclamado");
+    const elVer = document.getElementById("roasVerificado");
+    const elBre = document.getElementById("brechaValor");
+
+    const pend = '<span class="pend">pendiente</span>';
+    elRec.innerHTML = (r.inversion && r.reclamado) ? (nf(2,2).format(r.reclamado / r.inversion) + "x") : pend;
+    elVer.innerHTML = (r.inversion && verificado != null) ? (nf(2,2).format(verificado / r.inversion) + "x") : pend;
+
+    if(r.reclamado && verificado != null){
+      const dif = r.reclamado - verificado;
+      const pct = (dif / r.reclamado) * 100;
+      elBre.innerHTML = copCorto(dif) + '<span style="font-size:.42em; letter-spacing:0"> &nbsp;' + entero.format(Math.round(pct)) + "% por encima</span>";
+    } else {
+      elBre.innerHTML = pend;
+    }
+  }
+
+  /* ==========================================================
+     4. GRÁFICOS
+     ========================================================== */
+  const COLOR = {
+    nude:"#C3A08D", rosa:"#F7A8BC", rojo:"#D01E4B", rojoOsc:"#A81440",
+    claro:"#FDEFEF", claroMed:"rgba(253,239,239,.62)", lineaVino:"rgba(247,168,188,.16)",
+    tinta:"#2B141B", tintaSua:"#8E7078", linea:"#EADAD2"
+  };
+  let gBrecha = null, gSeo = null;
+
+  function tramaDiagonal(base, linea){
+    const c = document.createElement("canvas");
+    c.width = c.height = 10;
+    const x = c.getContext("2d");
+    x.fillStyle = base; x.fillRect(0,0,10,10);
+    x.strokeStyle = linea; x.lineWidth = 2.4;
+    x.beginPath(); x.moveTo(-2,10); x.lineTo(10,-2); x.moveTo(3,15); x.lineTo(15,3); x.stroke();
+    return x.createPattern(c, "repeat");
+  }
+
+  // Etiquetas directas sobre cada barra
+  const etiquetasBarra = {
+    id:"etiquetasBarra",
+    afterDatasetsDraw(chart, args, opts){
+      const {ctx} = chart;
+      ctx.save();
+      ctx.font = "600 12px 'Instrument Sans', sans-serif";
+      ctx.fillStyle = opts.color;
+      chart.getDatasetMeta(0).data.forEach((barra, i) => {
+        const v = chart.data.datasets[0].data[i];
+        if(v == null) return;
+        const texto = opts.formato(v, i);
+        if(opts.horizontal){
+          ctx.textAlign = "left"; ctx.textBaseline = "middle";
+          ctx.fillText(texto, barra.x + 10, barra.y);
+        } else {
+          ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+          ctx.fillText(texto, barra.x, barra.y - 9);
+        }
+      });
+      ctx.restore();
+    }
+  };
+
+  // Línea de referencia punteada
+  const lineaReferencia = {
+    id:"lineaReferencia",
+    afterDatasetsDraw(chart, args, opts){
+      if(opts.valor == null) return;
+      const {ctx, chartArea:area, scales} = chart;
+      ctx.save();
+      ctx.setLineDash([5,5]);
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = opts.color;
+      ctx.beginPath();
+      if(opts.horizontal){
+        const x = scales.x.getPixelForValue(opts.valor);
+        ctx.moveTo(x, area.top); ctx.lineTo(x, area.bottom);
+      } else {
+        const y = scales.y.getPixelForValue(opts.valor);
+        ctx.moveTo(area.left, y); ctx.lineTo(area.right, y);
+      }
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font = "600 11px 'Instrument Sans', sans-serif";
+      ctx.fillStyle = opts.color;
+      if(opts.horizontal){
+        const x = scales.x.getPixelForValue(opts.valor);
+        ctx.textAlign = "center"; ctx.textBaseline = "top";
+        ctx.fillText(opts.texto, x, area.top - 16);
+      } else {
+        const y = scales.y.getPixelForValue(opts.valor);
+        ctx.textAlign = "left"; ctx.textBaseline = "bottom";
+        ctx.fillText(opts.texto, area.left + 6, y - 7);
+      }
+      ctx.restore();
+    }
+  };
+
+  function sinLibreria(){
+    return typeof window.Chart === "undefined";
+  }
+
+  const angosto = () => window.innerWidth < 760;
+
+  function pintarGraficoBrecha(){
+    const caja = document.getElementById("sinDatosBrecha");
+    const lienzo = document.getElementById("graficoBrecha");
+    const r = DATOS.roas;
+    const datos = [r.inversion, r.reclamado, r.ga4, r.shopify];
+    const hayDatos = datos.some(v => v != null && v !== "");
+
+    if(gBrecha){ gBrecha.destroy(); gBrecha = null; }
+    if(!hayDatos || sinLibreria()){
+      caja.hidden = false; lienzo.style.visibility = "hidden";
+      if(sinLibreria() && hayDatos){
+        caja.querySelector("p").textContent = "No se pudo cargar la librería de gráficos. Revise la conexión a internet del equipo donde se proyecta.";
+      }
+      return;
+    }
+    caja.hidden = true; lienzo.style.visibility = "visible";
+
+    const ctx = lienzo.getContext("2d");
+    const verificado = (r.ga4 != null && r.shopify != null) ? (r.ga4 + r.shopify)/2 : null;
+
+    gBrecha = new Chart(ctx, {
+      type:"bar",
+      data:{
+        labels: angosto()
+          ? ["Inversión", ["Reclamado","por la agencia"], ["Verificado","GA4"], ["Verificado","Shopify"]]
+          : [
+              ["Inversión total"],
+              ["Valor de conversión","que reclama la agencia"],
+              ["Ingresos verificados","Google Analytics 4"],
+              ["Ingresos verificados","Shopify"]
+            ],
+        datasets:[{
+          label:"Pesos",
+          data:datos,
+          backgroundColor:[
+            COLOR.nude,
+            tramaDiagonal("rgba(247,168,188,.55)", "rgba(253,239,239,.55)"),
+            COLOR.rojo,
+            COLOR.rojo
+          ],
+          borderColor:[COLOR.nude, COLOR.rosa, COLOR.rojo, COLOR.rojo],
+          borderWidth:1.5,
+          borderRadius:{ topLeft:4, topRight:4, bottomLeft:0, bottomRight:0 },
+          borderSkipped:"bottom",
+          maxBarThickness:96,
+          categoryPercentage:.68,
+          barPercentage:.86
+        }]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        animation:{ duration: reducir ? 0 : 1100, easing:"easeOutQuart" },
+        layout:{ padding:{ top:34 } },
+        plugins:{
+          legend:{ display:false },
+          tooltip:{
+            backgroundColor:"#2C0512",
+            borderColor:COLOR.lineaVino, borderWidth:1,
+            padding:12, displayColors:false,
+            titleFont:{ family:"'Instrument Sans', sans-serif", size:12 },
+            bodyFont:{ family:"'Instrument Sans', sans-serif", size:14, weight:"600" },
+            callbacks:{
+              title:(items) => items[0].label.replace(/,/g, " "),
+              label:(item) => formatear(item.parsed.y, "cop")
+            }
+          },
+          etiquetasBarra:{ color:COLOR.claro, horizontal:false, formato:(v) => copCorto(v) },
+          lineaReferencia:{ valor:verificado, color:"rgba(247,168,188,.7)", texto:"nivel verificado", horizontal:false }
+        },
+        scales:{
+          x:{
+            grid:{ display:false },
+            border:{ color:COLOR.lineaVino },
+            ticks:{ color:COLOR.claroMed, font:{ family:"'Instrument Sans', sans-serif", size:12 }, padding:8 }
+          },
+          y:{
+            beginAtZero:true,
+            grid:{ color:COLOR.lineaVino, drawTicks:false },
+            border:{ display:false },
+            ticks:{
+              color:"rgba(253,239,239,.45)",
+              font:{ family:"'Instrument Sans', sans-serif", size:11 },
+              padding:10,
+              maxTicksLimit:6,
+              callback:(v) => copCorto(v)
+            }
+          }
+        }
+      },
+      plugins:[etiquetasBarra, lineaReferencia]
+    });
+  }
+
+  function pintarGraficoSeo(){
+    const caja = document.getElementById("sinDatosSeo");
+    const lienzo = document.getElementById("graficoSeo");
+    const kws = (DATOS.seo.keywords || []).filter(k => k && k.kw && k.pos != null);
+
+    if(gSeo){ gSeo.destroy(); gSeo = null; }
+    if(!kws.length || sinLibreria()){
+      caja.hidden = false; lienzo.style.visibility = "hidden";
+      if(sinLibreria() && kws.length){
+        caja.querySelector("p").textContent = "No se pudo cargar la librería de gráficos. Revise la conexión a internet del equipo donde se proyecta.";
+      }
+      return;
+    }
+    caja.hidden = true; lienzo.style.visibility = "visible";
+
+    const orden = kws.slice().sort((a,b) => a.pos - b.pos);
+    const maxPos = Math.ceil((Math.max(20, ...orden.map(k => k.pos)) + 2) / 5) * 5;
+
+    gSeo = new Chart(lienzo.getContext("2d"), {
+      type:"bar",
+      data:{
+        labels: orden.map(k => k.kw),
+        datasets:[{
+          label:"Posición actual",
+          data: orden.map(k => k.pos),
+          backgroundColor: orden.map(k => k.pos <= 10 ? COLOR.rojoOsc : COLOR.rojo),
+          borderRadius:{ topLeft:0, bottomLeft:0, topRight:4, bottomRight:4 },
+          borderSkipped:"left",
+          maxBarThickness:24,
+          categoryPercentage:.82,
+          barPercentage:.9
+        }]
+      },
+      options:{
+        indexAxis:"y",
+        responsive:true, maintainAspectRatio:false,
+        animation:{ duration: reducir ? 0 : 1000, easing:"easeOutQuart" },
+        layout:{ padding:{ right: angosto() ? 66 : 150, top:22 } },
+        plugins:{
+          legend:{ display:false },
+          tooltip:{
+            backgroundColor:COLOR.tinta, padding:12, displayColors:false,
+            titleFont:{ family:"'Instrument Sans', sans-serif", size:12 },
+            bodyFont:{ family:"'Instrument Sans', sans-serif", size:13, weight:"600" },
+            callbacks:{
+              label:(item) => {
+                const k = orden[item.dataIndex];
+                return "Posición " + k.pos + (k.vol ? " · " + entero.format(k.vol) + " búsquedas al mes" : "");
+              }
+            }
+          },
+          etiquetasBarra:{
+            color:COLOR.tintaSua, horizontal:true,
+            formato:(v,i) => angosto()
+              ? "Pos. " + v
+              : "Pos. " + v + (orden[i].vol ? "  ·  " + entero.format(orden[i].vol) + " búsquedas/mes" : "")
+          },
+          lineaReferencia:{ valor:10, color:COLOR.nude, texto:"primera página", horizontal:true }
+        },
+        scales:{
+          x:{
+            beginAtZero:true, max:maxPos,
+            grid:{ color:COLOR.linea, drawTicks:false },
+            border:{ display:false },
+            title:{ display:true, text:"Posición en resultados de búsqueda", color:COLOR.tintaSua,
+                    font:{ family:"'Instrument Sans', sans-serif", size:11, weight:"600" }, padding:{ top:8 } },
+            ticks:{ color:COLOR.tintaSua, font:{ family:"'Instrument Sans', sans-serif", size:11 }, padding:8, stepSize:5 }
+          },
+          y:{
+            grid:{ display:false },
+            border:{ color:COLOR.linea },
+            ticks:{ color:COLOR.tinta, font:{ family:"'Instrument Sans', sans-serif", size:12.5, weight:"500" }, padding:10 }
+          }
+        }
+      },
+      plugins:[etiquetasBarra, lineaReferencia]
+    });
+  }
+
+  /* ==========================================================
+     5. PANEL DE DATOS
+     ========================================================== */
+  const ESQUEMA = [
+    { grupo:"Objetivo", campos:[
+      { ruta:"ventaMensualActual", etiqueta:"Venta mensual actual (pesos)", pista:"Ejemplo: 120000000" }
+    ]},
+    { grupo:"Shopify, semana y mes", campos:[
+      { ruta:"shopify.ventasNetas.v",   etiqueta:"Ventas netas (pesos)" },
+      { ruta:"shopify.ventasNetas.sem", etiqueta:"Ventas netas, variación semanal (%)" },
+      { ruta:"shopify.ventasNetas.mes", etiqueta:"Ventas netas, variación mensual (%)" },
+      { ruta:"shopify.pedidos.v",   etiqueta:"Pedidos" },
+      { ruta:"shopify.pedidos.sem", etiqueta:"Pedidos, variación semanal (%)" },
+      { ruta:"shopify.pedidos.mes", etiqueta:"Pedidos, variación mensual (%)" },
+      { ruta:"shopify.clientesNuevos.v",   etiqueta:"Clientes nuevos" },
+      { ruta:"shopify.clientesNuevos.sem", etiqueta:"Clientes nuevos, variación semanal (%)" },
+      { ruta:"shopify.clientesNuevos.mes", etiqueta:"Clientes nuevos, variación mensual (%)" },
+      { ruta:"shopify.ticketPromedio.v",   etiqueta:"Ticket promedio (pesos)" },
+      { ruta:"shopify.ticketPromedio.sem", etiqueta:"Ticket promedio, variación semanal (%)" },
+      { ruta:"shopify.ticketPromedio.mes", etiqueta:"Ticket promedio, variación mensual (%)" },
+      { ruta:"shopify.conversion.v",   etiqueta:"Tasa de conversión (%)" },
+      { ruta:"shopify.conversion.sem", etiqueta:"Conversión, variación semanal (%)" },
+      { ruta:"shopify.conversion.mes", etiqueta:"Conversión, variación mensual (%)" }
+    ]},
+    { grupo:"Brecha de ROAS", campos:[
+      { ruta:"roas.mes", etiqueta:"Periodo analizado", texto:true, pista:"Ejemplo: agosto" },
+      { ruta:"roas.inversion", etiqueta:"Inversión total en conversión web (pesos)" },
+      { ruta:"roas.reclamado", etiqueta:"Valor de conversión reclamado por la agencia (pesos)" },
+      { ruta:"roas.ga4",       etiqueta:"Ingresos verificados en GA4 (pesos)" },
+      { ruta:"roas.shopify",   etiqueta:"Ingresos verificados en Shopify (pesos)" }
+    ]},
+    { grupo:"SEO", campos:[
+      { ruta:"seo.indexadas", etiqueta:"Páginas indexadas" },
+      { ruta:"seo.totales",   etiqueta:"Páginas publicadas en total" },
+      { ruta:"seo.pctSinTrafico", etiqueta:"Catálogo con tráfico casi nulo (%)" },
+      { ruta:"seo.keywords", etiqueta:"Palabras clave cerca de la primera página", area:true,
+        pista:"Una por línea, con el formato: palabra clave, posición, volumen mensual" }
+    ]},
+    { grupo:"Plan escalonado", campos:[
+      { ruta:"hitoIntermedio", etiqueta:"Meta mensual del hito intermedio (pesos)", pista:"Déjelo vacío si aún no está definido" }
+    ]}
+  ];
+
+  function aNumero(txt){
+    if(txt == null) return null;
+    let s = String(txt).trim().replace(/[^\d.,-]/g, "");
+    if(!s) return null;
+    if(s.indexOf(",") > -1){ s = s.replace(/\./g, "").replace(",", "."); }
+    else if(/^-?\d{1,3}(\.\d{3})+$/.test(s)){ s = s.replace(/\./g, ""); }
+    const n = parseFloat(s);
+    return Number.isNaN(n) ? null : n;
+  }
+
+  function construirPanel(){
+    const cuerpo = document.getElementById("panelCuerpo");
+    cuerpo.innerHTML = "";
+    ESQUEMA.forEach(g => {
+      const fs = document.createElement("fieldset");
+      fs.className = "grupo-campos";
+      const lg = document.createElement("legend");
+      lg.textContent = g.grupo;
+      fs.appendChild(lg);
+      g.campos.forEach(c => {
+        const div = document.createElement("div");
+        div.className = "campo";
+        const id = "campo-" + c.ruta.replace(/\./g, "-");
+        const lab = document.createElement("label");
+        lab.setAttribute("for", id);
+        lab.textContent = c.etiqueta;
+        div.appendChild(lab);
+
+        const val = leerRuta(c.ruta);
+        let input;
+        if(c.area){
+          input = document.createElement("textarea");
+          input.value = (val || []).map(k => [k.kw, k.pos, k.vol].filter(x => x != null && x !== "").join(", ")).join("\n");
+        } else {
+          input = document.createElement("input");
+          input.type = "text";
+          input.inputMode = c.texto ? "text" : "decimal";
+          input.value = (val == null ? "" : val);
+        }
+        input.id = id;
+        input.dataset.ruta = c.ruta;
+        if(c.texto) input.dataset.texto = "si";
+        if(c.area) input.dataset.area = "si";
+        div.appendChild(input);
+        if(c.pista){
+          const p = document.createElement("p");
+          p.className = "pista-campo";
+          p.textContent = c.pista;
+          div.appendChild(p);
+        }
+        fs.appendChild(div);
+      });
+      cuerpo.appendChild(fs);
+    });
+  }
+
+  function guardarPanel(){
+    document.querySelectorAll("#panelCuerpo [data-ruta]").forEach(input => {
+      const ruta = input.dataset.ruta;
+      if(input.dataset.area === "si"){
+        const filas = input.value.split("\n").map(l => l.trim()).filter(Boolean).map(l => {
+          const partes = l.split(",");
+          const kw = (partes[0] || "").trim();
+          const pos = aNumero(partes[1]);
+          const vol = aNumero(partes[2]);
+          return kw ? { kw:kw, pos:pos, vol:vol } : null;
+        }).filter(Boolean);
+        escribirRuta(ruta, filas);
+      } else if(input.dataset.texto === "si"){
+        escribirRuta(ruta, input.value.trim() || null);
+      } else {
+        escribirRuta(ruta, aNumero(input.value));
+      }
+    });
+    guardar();
+    pintarTodo();
+  }
+
+  function alternarPanel(abrir){
+    const panel = document.getElementById("panelDatos");
+    const velo = document.getElementById("velo");
+    const boton = document.getElementById("abrirDatos");
+    panel.classList.toggle("visible", abrir);
+    panel.setAttribute("aria-hidden", abrir ? "false" : "true");
+    boton.setAttribute("aria-expanded", abrir ? "true" : "false");
+    velo.hidden = false;
+    velo.classList.toggle("visible", abrir);
+    if(abrir){
+      construirPanel();
+      const primero = panel.querySelector("input, textarea");
+      if(primero) primero.focus();
+    } else {
+      boton.focus();
+    }
+  }
+
+  /* ==========================================================
+     6. MOVIMIENTO Y NAVEGACIÓN
+     ========================================================== */
+  function activarRevelado(){
+    const obs = new IntersectionObserver((entradas) => {
+      entradas.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add("dentro"); obs.unobserve(e.target); }
+      });
+    }, { threshold:.12, rootMargin:"0px 0px -8% 0px" });
+    document.querySelectorAll(".rev").forEach(el => obs.observe(el));
+  }
+
+  function activarNavegacion(){
+    const nav = document.getElementById("nav");
+    const barra = document.getElementById("barraProgreso");
+    const hero = document.getElementById("objetivo");
+    const enlaces = Array.from(document.querySelectorAll("#navEnlaces a"));
+    const secciones = enlaces.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+
+    function alDesplazar(){
+      const y = window.scrollY;
+      nav.classList.toggle("solida", y > hero.offsetHeight - 90);
+      const alto = document.documentElement.scrollHeight - window.innerHeight;
+      barra.style.transform = "scaleX(" + (alto > 0 ? Math.min(1, y / alto) : 0) + ")";
+    }
+    window.addEventListener("scroll", alDesplazar, { passive:true });
+    alDesplazar();
+
+    const obs = new IntersectionObserver((entradas) => {
+      entradas.forEach(e => {
+        if(!e.isIntersecting) return;
+        const i = secciones.indexOf(e.target);
+        enlaces.forEach((a,j) => a.classList.toggle("activo", j === i));
+      });
+    }, { rootMargin:"-45% 0px -50% 0px" });
+    secciones.forEach(s => obs.observe(s));
+  }
+
+  function activarHilos(){
+    const lienzo = document.getElementById("lienzo-hilos");
+    const ctx = lienzo.getContext("2d");
+    let ancho = 0, alto = 0, t = 0, animando = true;
+
+    function medir(){
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      ancho = lienzo.clientWidth; alto = lienzo.clientHeight;
+      lienzo.width = ancho * dpr; lienzo.height = alto * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    const hilos = [
+      { amp:.16, base:.34, grosor:1.6, vel:.00022, fase:0,   color:"rgba(247,168,188,.50)" },
+      { amp:.11, base:.48, grosor:1.1, vel:.00031, fase:1.7, color:"rgba(240,87,125,.42)" },
+      { amp:.20, base:.62, grosor:2.2, vel:.00017, fase:3.2, color:"rgba(247,168,188,.26)" },
+      { amp:.09, base:.74, grosor:1.0, vel:.00027, fase:4.6, color:"rgba(253,239,239,.18)" }
+    ];
+
+    function dibujar(){
+      ctx.clearRect(0,0,ancho,alto);
+      hilos.forEach(h => {
+        ctx.beginPath();
+        for(let x = 0; x <= ancho; x += 8){
+          const p = x / ancho;
+          const y = alto * (h.base
+            + h.amp * .5 * Math.sin(p * 3.1 + t * h.vel * 1000 + h.fase)
+            + h.amp * .28 * Math.sin(p * 6.4 - t * h.vel * 620 + h.fase));
+          if(x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = h.color;
+        ctx.lineWidth = h.grosor;
+        ctx.stroke();
+      });
+    }
+
+    function marco(ahora){
+      t = ahora;
+      dibujar();
+      if(animando) requestAnimationFrame(marco);
+    }
+
+    medir();
+    window.addEventListener("resize", () => { medir(); dibujar(); });
+    if(reducir){ animando = false; dibujar(); }
+    else requestAnimationFrame(marco);
+  }
+
+  function activarDecisiones(){
+    let guardadas = {};
+    try{ guardadas = JSON.parse(localStorage.getItem(LLAVE_CHECK) || "{}"); }catch(e){}
+    document.querySelectorAll(".marca-decision").forEach(chk => {
+      chk.checked = !!guardadas[chk.id];
+      chk.addEventListener("change", () => {
+        guardadas[chk.id] = chk.checked;
+        try{ localStorage.setItem(LLAVE_CHECK, JSON.stringify(guardadas)); }catch(e){}
+      });
+    });
+  }
+
+  /* ==========================================================
+     7. ARRANQUE
+     ========================================================== */
+  function pintarTodo(){
+    pintarValores();
+    pintarMedidores();
+    pintarBrecha();
+    pintarGraficoBrecha();
+    pintarGraficoSeo();
+  }
+
+  function iniciar(){
+    if(window.Chart){
+      Chart.defaults.font.family = "'Instrument Sans', system-ui, sans-serif";
+      Chart.defaults.color = COLOR.tintaSua;
+    }
+    cargarGuardado();
+    pintarTodo();
+    activarRevelado();
+    activarNavegacion();
+    activarHilos();
+    activarDecisiones();
+
+    document.getElementById("abrirDatos").addEventListener("click", () => alternarPanel(true));
+    document.getElementById("cerrarPanel").addEventListener("click", () => alternarPanel(false));
+    document.getElementById("velo").addEventListener("click", () => alternarPanel(false));
+    document.getElementById("guardarDatos").addEventListener("click", () => { guardarPanel(); alternarPanel(false); });
+    document.getElementById("limpiarDatos").addEventListener("click", () => {
+      DATOS = clonar(DATOS_BASE);
+      try{ localStorage.removeItem(LLAVE); }catch(e){}
+      construirPanel();
+      pintarTodo();
+    });
+    let eraAngosto = angosto(), temporizador = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(temporizador);
+      temporizador = setTimeout(() => {
+        if(angosto() !== eraAngosto){
+          eraAngosto = angosto();
+          pintarGraficoBrecha();
+          pintarGraficoSeo();
+        }
+      }, 220);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape" && document.getElementById("panelDatos").classList.contains("visible")){
+        alternarPanel(false);
+      }
+    });
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar);
+  else iniciar();
+})();
+</script>
+</body>
+</html>
