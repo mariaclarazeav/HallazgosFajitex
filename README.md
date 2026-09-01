@@ -25,7 +25,6 @@ Algunas cifras tienen además un ícono de información que despliega el método
 Las cifras que aún no están confirmadas aparecen resaltadas en amarillo con la nota
 "completar con dato real". Ninguna fue estimada ni aproximada. Hoy quedan pendientes:
 
-- El detalle del rol de Marketing Relacional, sección Equipo
 - El hito intermedio del plan escalonado
 - Los montos del checklist de cierre
 
