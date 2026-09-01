@@ -310,7 +310,45 @@ section[id]{ scroll-margin-top:82px; }
   font-size:clamp(1.1rem,1.8vw,1.5rem); font-weight:400; font-style:italic;
   line-height:1.34; color:var(--negro); max-width:58ch;
 }
-.cita .fuente{ margin-top:11px; font-style:normal; }
+.cita .fuente{
+  margin-top:11px; font-style:normal;
+  font-family:var(--texto); font-size:.735rem; font-weight:400;
+  line-height:1.45; color:var(--gris-sua);
+}
+.cita .fuente b{ color:var(--gris); font-weight:600; }
+
+/* --- Bloque de acción concreta y nota aparte --- */
+.accion{
+  background:var(--blanco); border:1px solid var(--linea);
+  border-left:3px solid var(--morado); border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:clamp(19px,2vw,27px); display:flex; flex-direction:column; gap:14px;
+}
+.accion-cab{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.accion h3{ font-family:var(--texto); font-size:1.02rem; font-weight:700; line-height:1.3; }
+.accion .codigo{
+  font-family:var(--texto); font-size:.68rem; font-weight:700; letter-spacing:.14em;
+  background:var(--morado-cl); color:var(--morado); border:1px solid var(--morado-linea);
+  padding:5px 11px; border-radius:999px;
+}
+.accion .texto{ font-size:.93rem; color:var(--gris); line-height:1.58; max-width:84ch; }
+.accion .texto b{ color:var(--negro); font-weight:600; }
+.accion .remate{
+  border-top:1px solid var(--linea); padding-top:13px;
+  display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.accion .remate p{ font-size:.9rem; color:var(--gris); line-height:1.55; max-width:70ch; }
+
+.aparte{
+  background:var(--nude-cl2); border:1px solid var(--linea);
+  border-left:3px solid var(--nude-osc); border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:clamp(19px,2vw,27px); display:flex; flex-direction:column; gap:12px;
+}
+.aparte .marca-aparte{
+  font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--nude-osc);
+}
+.aparte h3{ font-family:var(--texto); font-size:1.02rem; font-weight:700; line-height:1.3; }
+.aparte .texto{ font-size:.93rem; color:var(--gris); line-height:1.58; max-width:84ch; }
+.aparte .texto b{ color:var(--negro); font-weight:600; }
 
 /* --- Estados --- */
 .estado{
@@ -887,6 +925,43 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
       </article>
     </div>
 
+    <div class="subtitulo-bloque rev">
+      <h3>Qué impulsó el crecimiento de esta semana específicamente</h3>
+      <span>Acción de conversión ejecutada durante la Flash Sale</span>
+    </div>
+
+    <div class="accion rev" style="--d:60ms">
+      <div class="accion-cab">
+        <h3>Código FLASH20, 20% de descuento, Flash Sale del 26 al 31 de agosto</h3>
+        <span class="codigo">FLASH20</span>
+      </div>
+      <div class="mini-datos" style="margin-top:0; padding-top:0; border-top:0">
+        <div class="mini-dato">
+          <p class="v" data-valor="10" data-fmt="num">10</p>
+          <p class="t">Pedidos en Online Store</p>
+        </div>
+        <div class="mini-dato">
+          <p class="v" data-valor="2718832" data-fmt="cop">$2.718.832</p>
+          <p class="t">En ventas</p>
+        </div>
+        <div class="mini-dato">
+          <p class="v" data-valor="665708" data-fmt="cop">$665.708</p>
+          <p class="t">En descuento aplicado</p>
+        </div>
+        <div class="mini-dato">
+          <p class="v" style="font-size:1.2rem">#22498 al #22662</p>
+          <p class="t">Rango de pedidos</p>
+        </div>
+      </div>
+      <div class="remate">
+        <p>Esto es relevante porque el crecimiento de la semana no viene solo de pauta
+           o de tráfico orgánico, viene en parte de una acción concreta de conversión.</p>
+        <span class="lider mr">Ejecuta Marketing Relacional</span>
+      </div>
+      <p class="fuente"><b>Fuente:</b> Shopify, reporte de códigos de descuento de Online Store,
+        pedidos #22498 al #22662.</p>
+    </div>
+
     <div class="cita rev">
       <p>El ticket promedio crece de forma sostenida en las dos comparativas, señal de que estamos
          capturando clientes de mayor valor, no solo más volumen.</p>
@@ -1114,6 +1189,23 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
       <p>3.234 leads entraron a WhatsApp y se facturaron 331, conversión de 10,2%.
          Cada punto porcentual adicional vale cerca de $7,6 millones al mes.</p>
       <p class="fuente"><b>Cita textual del informe oficial</b> de la Dirección Nacional de Ventas B2C, agosto de 2026.</p>
+    </div>
+
+    <div class="aparte rev" style="margin-top:clamp(18px,2vw,26px)">
+      <p class="marca-aparte">Nota aparte</p>
+      <h3>Un ejemplo concreto de venta asistida, no digital</h3>
+      <p class="texto">
+        El código de descuento SISTE, posiblemente una alianza con Sistecrédito, registra
+        <b>16 pedidos por $2.946.335</b>, pero el <b>100% son Draft Orders</b>, es decir pedidos
+        creados manualmente, no compras de Online Store. El periodo de uso del código abarca
+        <b>más de un año</b>, de agosto de 2025 a agosto de 2026, no una campaña puntual reciente.
+      </p>
+      <p class="texto">
+        Por eso no se puede atribuir a tráfico digital ni a una campaña de esta semana.
+        Es evidencia adicional del patrón de venta asistida que ya se documentó en el diagnóstico.
+      </p>
+      <p class="fuente"><b>Fuente:</b> Shopify, reporte de códigos de descuento y detalle de pedidos,
+        agosto de 2025 a agosto de 2026.</p>
     </div>
   </div>
 </section>
