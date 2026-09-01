@@ -29,7 +29,7 @@ Las cifras que aún no están confirmadas aparecen resaltadas en amarillo con la
 - El hito intermedio del plan escalonado
 - Los montos del checklist de cierre
 
-## Las trece secciones
+## Las catorce secciones
 
 1. Objetivo, la meta escalonada
 2. Shopify, lo que es cierto y medible
@@ -37,13 +37,14 @@ Las cifras que aún no están confirmadas aparecen resaltadas en amarillo con la
 4. Diagnóstico heredado
 5. La auditoría de tracking, hallazgos y estado
 6. La brecha de ROAS, único quiebre de tono visual de la página
-7. Comparativo 2025 contra 2026
-8. El patrón que se repite, cuatro agencias
-9. SEO, la oportunidad ya identificada
-10. Lo que dejamos de ganar, y lo que vamos a ganar
-11. El equipo que lo ejecuta
-12. Plan escalonado
-13. Cierre, lo que se necesita de Presidencia
+7. Contraste contra el informe interno de junio de 2026
+8. Comparativo 2025 contra 2026
+9. El patrón que se repite, cuatro agencias
+10. SEO, la oportunidad ya identificada
+11. Lo que dejamos de ganar, y lo que vamos a ganar
+12. El equipo que lo ejecuta
+13. Plan escalonado
+14. Cierre, lo que se necesita de Presidencia
 
 ## Detalles técnicos
 

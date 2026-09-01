@@ -466,6 +466,52 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   border-left:2px solid #C9A9E4; padding-left:14px; max-width:70ch;
 }
 
+/* --- Contrastes contra el informe de junio --- */
+.contrastes{ display:grid; gap:clamp(14px,1.5vw,20px); }
+.contraste{
+  border:1px solid var(--linea); border-radius:var(--r-lg);
+  overflow:hidden; background:var(--blanco);
+}
+.contraste.clave{ border-color:var(--morado-linea); box-shadow:0 22px 46px -40px rgba(76,29,107,.7); }
+.contraste-tema{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding:13px clamp(17px,1.8vw,24px);
+  background:var(--nude-cl2); border-bottom:1px solid var(--linea);
+}
+.contraste.clave .contraste-tema{ background:var(--morado-cl); border-bottom-color:var(--morado-linea); }
+.contraste-tema h3{ font-family:var(--texto); font-size:.98rem; font-weight:700; letter-spacing:-.005em; }
+.contraste-tema .marca-clave{
+  font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+  color:var(--morado); background:var(--blanco); border:1px solid var(--morado-linea);
+  padding:4px 10px; border-radius:999px;
+}
+.contraste-cuerpo{ display:grid; grid-template-columns:1fr 62px 1fr; }
+.contraste-lado{ padding:clamp(17px,1.8vw,25px); display:flex; flex-direction:column; gap:9px; }
+.lado-informe{ background:var(--nude-cl2); }
+.lado-evidencia{ background:var(--blanco); }
+.contraste-lado .quien{
+  font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--gris-sua);
+}
+.lado-evidencia .quien{ color:var(--morado); }
+.contraste.confirma .lado-evidencia .quien{ color:var(--ok); }
+.contraste-lado .texto{ font-size:.93rem; line-height:1.58; color:var(--negro); }
+.lado-informe .texto{ color:var(--gris); font-style:italic; }
+.contraste-icono{
+  display:grid; place-content:center; background:var(--blanco);
+  border-inline:1px solid var(--linea);
+}
+.contraste-icono .marca{
+  width:32px; height:32px; border-radius:50%; display:grid; place-content:center;
+  background:var(--critico-bg); color:var(--critico); border:1px solid #F0CFCB;
+  padding:0;
+}
+.contraste.confirma .contraste-icono .marca{ background:var(--ok-bg); color:var(--ok); border-color:#CCE3D8; }
+.contraste-icono .rotulo{
+  font-size:.58rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--critico); margin-top:7px; text-align:center; writing-mode:horizontal-tb;
+}
+.contraste.confirma .contraste-icono .rotulo{ color:var(--ok); }
+
 /* --- Agencias --- */
 .agencias{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.2vw,18px); }
 .agencia{
@@ -614,6 +660,10 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 }
 @media (max-width:900px){
   .nav-enlaces{ display:none; }
+  .contraste-cuerpo{ grid-template-columns:1fr; }
+  .contraste-icono{ border-inline:0; border-block:1px solid var(--linea); padding:14px 0;
+    display:flex; align-items:center; justify-content:center; gap:10px; }
+  .contraste-icono .rotulo{ margin-top:0; }
   .r-3,.r-4{ grid-template-columns:repeat(2,minmax(0,1fr)); }
   .escalon{ grid-template-columns:1fr; }
   .bloques-potencial{ grid-template-columns:1fr; }
@@ -656,6 +706,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
     <a href="#diagnostico">Diagnóstico</a>
     <a href="#auditoria">Auditoría</a>
     <a href="#brecha">Brecha ROAS</a>
+    <a href="#informe-junio">Informe junio</a>
     <a href="#comparativo">2025 vs 2026</a>
     <a href="#agencias">Agencias</a>
     <a href="#seo">SEO</a>
@@ -1395,7 +1446,171 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 7. COMPARATIVO 2025 vs 2026 ============ -->
+<!-- ============ 7. CONTRASTE CONTRA EL INFORME DE JUNIO ============ -->
+<section id="informe-junio" class="borde-arriba">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">Lo que ya se había dicho</p>
+      <h2 class="h-seccion">Esto ya había pasado antes, sin que nadie lo verificara</h2>
+      <p class="parrafo ancho">
+        Antes de esta auditoría, ya existía un diagnóstico interno del canal digital.
+        Vale la pena revisar sus conclusiones a la luz de lo que hoy sabemos, porque muestra
+        que el problema de fondo no es nuevo, es que nunca se había verificado con datos cruzados.
+      </p>
+      <div class="fuente-seccion">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 7.2v4M8 4.6v.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <p><b>Fuente de toda la sección:</b> contraste del informe interno "Canal digital Fajitex",
+        presentado en junio de 2026, contra los hallazgos de esta auditoría.</p>
+      </div>
+    </div>
+
+    <div class="contrastes">
+      <article class="contraste rev">
+        <div class="contraste-tema">
+          <h3>Sobre la caída de la conversión web</h3>
+          <span class="estado critico">Refutado</span>
+        </div>
+        <div class="contraste-cuerpo">
+          <div class="contraste-lado lado-informe">
+            <p class="quien">Lo que decía el informe de junio</p>
+            <p class="texto">El sitio se está desasistiendo, es una buena señal de madurez digital,
+              porque baja la participación de WhatsApp.</p>
+            <p class="fuente"><b>Fuente:</b> informe interno Canal digital Fajitex, junio de 2026.</p>
+          </div>
+          <div class="contraste-icono">
+            <span class="marca" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <span class="rotulo">Refuta</span>
+          </div>
+          <div class="contraste-lado lado-evidencia">
+            <p class="quien">Lo que muestra la evidencia hoy</p>
+            <p class="texto">
+              Draft Orders, es decir venta asistida, representa el <b>52,9%</b> de la revenue
+              en la categoría shorts, más de la mitad del negocio de esa categoría.
+              El checkout tiene además una limitación estructural de medición,
+              Checkout Extensibility de Shopify, que impide confirmar cualquier lectura de autonomía del sitio.
+              Y la participación de WhatsApp es volátil mes a mes, del <b>46,66% al 95,29%</b>
+              solo en el primer cuatrimestre de 2026, no una tendencia sostenida a la baja.
+            </p>
+            <p class="fuente">
+              <b>Fuentes:</b> Shopify, Draft Orders en la categoría shorts.
+              Hallazgo 04 de la auditoría de tracking, Google Tag Manager.
+              Participación de canal del primer cuatrimestre de 2026, hallazgos de esta auditoría.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="contraste rev">
+        <div class="contraste-tema">
+          <h3>Sobre el paso a un modelo autónomo y escalable</h3>
+          <span class="estado critico">Refutado</span>
+        </div>
+        <div class="contraste-cuerpo">
+          <div class="contraste-lado lado-informe">
+            <p class="quien">Lo que decía el informe de junio</p>
+            <p class="texto">El ecommerce no está perdiendo relevancia, está pasando de un modelo
+              asistido a uno autónomo y escalable.</p>
+            <p class="fuente"><b>Fuente:</b> informe interno Canal digital Fajitex, junio de 2026.</p>
+          </div>
+          <div class="contraste-icono">
+            <span class="marca" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <span class="rotulo">Refuta</span>
+          </div>
+          <div class="contraste-lado lado-evidencia">
+            <p class="quien">Lo que muestra la evidencia hoy</p>
+            <p class="texto">
+              <b>14,4%</b> de indexación en Google y <b>78,9%</b> del catálogo con 2 clics o menos
+              en 6 meses. Un sitio con la mayoría de su catálogo invisible para Google
+              no puede sostener la narrativa de modelo autónomo escalable.
+            </p>
+            <p class="fuente"><b>Fuente:</b> Google Search Console, informes de Indexación y de Páginas,
+              últimos 6 meses a agosto de 2026, detallado en la sección de SEO.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="contraste confirma rev">
+        <div class="contraste-tema">
+          <h3>Sobre las fuentes de tráfico</h3>
+          <span class="estado ok">Confirmado</span>
+        </div>
+        <div class="contraste-cuerpo">
+          <div class="contraste-lado lado-informe">
+            <p class="quien">Lo que decía el informe de junio</p>
+            <p class="texto">El problema radica en la adquisición y la visibilidad, SEO,
+              paid social y orgánico social.</p>
+            <p class="fuente"><b>Fuente:</b> informe interno Canal digital Fajitex, junio de 2026.</p>
+          </div>
+          <div class="contraste-icono">
+            <span class="marca" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.6l3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="rotulo">Confirma</span>
+          </div>
+          <div class="contraste-lado lado-evidencia">
+            <p class="quien">Lo que muestra la evidencia hoy</p>
+            <p class="texto">
+              Este diagnóstico fue acertado y la auditoría de Google Search Console lo confirma
+              con datos concretos meses después. Es el único punto del informe original
+              que se sostiene con la evidencia actual.
+            </p>
+            <p class="fuente"><b>Fuente:</b> Google Search Console, Rendimiento de búsqueda,
+              Consultas, Páginas e Indexación, últimos 6 meses a agosto de 2026.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="contraste clave rev">
+        <div class="contraste-tema">
+          <h3>Sobre el ROAS de abril de 2026</h3>
+          <span class="marca-clave">Lo más importante</span>
+          <span class="estado critico">Refutado</span>
+        </div>
+        <div class="contraste-cuerpo">
+          <div class="contraste-lado lado-informe">
+            <p class="quien">Lo que decía el informe de junio, cita textual</p>
+            <p class="texto">El ROAS en abril es el más alto que hemos tenido en el último año,
+              llegando a 10,96, estamos gastando menos con mayor venta, dejamos de quemar dinero.</p>
+            <p class="fuente"><b>Fuente:</b> informe interno Canal digital Fajitex, junio de 2026, cita textual.</p>
+          </div>
+          <div class="contraste-icono">
+            <span class="marca" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <span class="rotulo">Refuta</span>
+          </div>
+          <div class="contraste-lado lado-evidencia">
+            <p class="quien">Lo que muestra la evidencia hoy</p>
+            <p class="texto">
+              Ese ROAS fue autoreportado por la plataforma, sin cruce independiente contra GA4
+              ni Shopify, la misma metodología que en agosto de 2026 mostró apenas
+              <b>6,1% de visibilidad real</b>. No existe forma de verificar retroactivamente
+              el ROAS de abril con los mismos datos crudos que sí se auditaron para agosto,
+              pero no hay ninguna razón para asumir que abril estaba mejor medido,
+              dado que la auditoría de tracking actual todavía no existía en ese momento.
+            </p>
+            <p class="fuente"><b>Fuente:</b> cruce entre Meta Ads Manager, Google Analytics 4 y Shopify,
+              agosto de 2026, detallado en la sección de brecha de ROAS.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="cita rev" style="border-left-color:var(--morado); text-align:center">
+      <p style="max-width:74ch; margin-inline:auto">
+        El informe de junio tenía razón en una cosa: el problema está en adquisición y visibilidad.
+        Se equivocó en la otra: celebrar un ROAS que nunca se verificó de forma independiente.
+        Es la misma lección que confirma el resto de esta auditoría.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. COMPARATIVO 2025 vs 2026 ============ -->
 <section id="comparativo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1484,7 +1699,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 8. AGENCIAS ============ -->
+<!-- ============ 9. AGENCIAS ============ -->
 <section id="agencias" class="borde-arriba tinte-nude">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1550,7 +1765,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 9. SEO ============ -->
+<!-- ============ 10. SEO ============ -->
 <section id="seo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1633,7 +1848,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 10. POTENCIAL ============ -->
+<!-- ============ 11. POTENCIAL ============ -->
 <section id="potencial" class="borde-arriba tinte-morado">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1704,7 +1919,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 11. EQUIPO ============ -->
+<!-- ============ 12. EQUIPO ============ -->
 <section id="equipo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1791,7 +2006,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 12. PLAN ============ -->
+<!-- ============ 13. PLAN ============ -->
 <section id="plan" class="borde-arriba tinte-nude">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1896,7 +2111,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 13. CIERRE ============ -->
+<!-- ============ 14. CIERRE ============ -->
 <section id="cierre" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
