@@ -1,7 +1,7 @@
 # Presentación a Presidencia · Mercadeo Digital y Omnicanalidad, Fajitex
 
-Página web de una sola vista para presentar los resultados de la gestión del canal digital
-y la ruta hacia la meta de $500.000.000 de venta mensual.
+Página web de una sola vista con el diagnóstico completo del canal digital
+y el plan hacia la meta de $500.000.000 de venta mensual.
 
 ## Cómo se usa
 
@@ -11,38 +11,46 @@ navegación fija de la parte superior.
 
 Requiere conexión a internet para cargar las fuentes tipográficas y la librería de gráficos.
 
-## Cómo se completan los datos
+## Logo
 
-Toda cifra que aún no está confirmada aparece resaltada en amarillo con la nota
-"completar con dato real". Ninguna cifra pendiente fue estimada ni inventada.
+Coloque el archivo del logo en `assets/logo-fajitex.png`. Mientras no exista,
+la barra de navegación muestra automáticamente la marca escrita "fajitex" como respaldo.
 
-Hay dos formas de llenarlas:
+## Transparencia de datos
 
-1. **Desde la página.** Botón "Completar datos" en la esquina inferior derecha.
-   Los valores quedan guardados en el navegador donde se escriben y actualizan
-   los textos, los medidores y los dos gráficos al instante.
-2. **Desde el código.** Objeto `DATOS_BASE` al inicio del bloque `<script>` de
-   `index.html`. Es la opción recomendada si la presentación se va a proyectar
-   desde otro equipo, porque los valores viajan con el archivo.
+Cada cifra destacada lleva debajo, en texto pequeño, la fuente exacta de donde se tomó,
+y cuando resulta de un cruce entre plataformas, el método de verificación.
+Algunas cifras tienen además un ícono de información que despliega el método completo con un clic.
 
-Las palabras clave de la sección de SEO se cargan una por línea con el formato
-`palabra clave, posición, volumen mensual`.
+Las cifras que aún no están confirmadas aparecen resaltadas en amarillo con la nota
+"completar con dato real". Ninguna fue estimada ni aproximada. Hoy quedan pendientes:
 
-## Estructura de la página
+- El detalle del rol de Marketing Relacional, sección Equipo
+- El hito intermedio del plan escalonado
+- Los montos del checklist de cierre
 
-1. Objetivo y metas mensuales de $250.000.000 y $500.000.000
-2. Lo que es cierto y medible, solo con datos de Shopify
-3. Diagnóstico heredado del canal
-4. Auditoría de tracking, hallazgos y estado de cada corrección
-5. La brecha de ROAS y el hallazgo de convergencia entre GA4 y Shopify
-6. SEO y GEO, oportunidad identificada y plan de tres fases
-7. El equipo que lo ejecuta y qué aporta cada rol
-8. Plan escalonado hacia la meta final
-9. Decisiones que se necesitan de Presidencia
+## Las trece secciones
+
+1. Objetivo, la meta escalonada
+2. Shopify, lo que es cierto y medible
+3. Agosto, el resultado oficial de Ventas B2C contra presupuesto
+4. Diagnóstico heredado
+5. La auditoría de tracking, hallazgos y estado
+6. La brecha de ROAS, único quiebre de tono visual de la página
+7. Comparativo 2025 contra 2026
+8. El patrón que se repite, cuatro agencias
+9. SEO, la oportunidad ya identificada
+10. Lo que dejamos de ganar, y lo que vamos a ganar
+11. El equipo que lo ejecuta
+12. Plan escalonado
+13. Cierre, lo que se necesita de Presidencia
 
 ## Detalles técnicos
 
 Un solo archivo HTML con CSS y JavaScript propios, sin backend.
-Gráficos con Chart.js 4.4.1 desde CDN. Tipografías Fraunces e Instrument Sans
-desde Google Fonts. Animaciones respetan la preferencia de movimiento reducido
-del sistema operativo y la página tiene hoja de estilos para impresión.
+Cinco gráficos con Chart.js 4.4.1 desde CDN, incluida una cascada simulada con barras flotantes.
+Los datos de los gráficos están en objetos con nombre al inicio del bloque `<script>`,
+al lado de la fuente correspondiente en el texto de la página.
+Tipografías Fraunces e Instrument Sans desde Google Fonts.
+Las animaciones respetan la preferencia de movimiento reducido del sistema operativo
+y la página tiene hoja de estilos para impresión.
