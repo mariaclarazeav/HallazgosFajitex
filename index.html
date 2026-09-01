@@ -550,6 +550,50 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 }
 .contraste.confirma .contraste-icono .rotulo{ color:var(--ok); }
 
+/* --- Recomendación dentro de la sección oscura --- */
+.recomendacion{
+  margin-top:clamp(18px,2vw,26px);
+  border:1px solid var(--linea-osc); border-left:3px solid #C9A9E4;
+  background:rgba(246,239,249,.05);
+  border-radius:0 var(--r-lg) var(--r-lg) 0;
+  padding:clamp(20px,2.2vw,30px); display:grid; gap:15px;
+}
+.recomendacion .marca-rec{
+  font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:#C9A9E4;
+}
+.recomendacion h3{ font-family:var(--texto); font-size:1.06rem; font-weight:700; line-height:1.32; color:#fff; }
+.recomendacion .texto{ font-size:.94rem; color:var(--sobre-osc-med); line-height:1.62; max-width:84ch; }
+.recomendacion .texto b{ color:#fff; font-weight:600; }
+.recomendacion-caja{
+  background:rgba(201,169,228,.1); border:1px solid rgba(201,169,228,.28);
+  border-radius:var(--r-md); padding:clamp(17px,1.9vw,24px); display:grid; gap:11px;
+}
+.recomendacion-caja p{ font-size:.95rem; color:var(--sobre-osc); line-height:1.62; max-width:80ch; }
+.recomendacion-caja p b{ color:#fff; font-weight:600; }
+.franja-oscura .mini-datos{ border-top-color:var(--linea-osc); }
+.franja-oscura .mini-dato .v{ color:#C9A9E4; }
+.franja-oscura .mini-dato .t{ color:var(--sobre-osc-med); }
+.trayecto-roas{
+  display:flex; align-items:baseline; gap:9px;
+  font-family:var(--display); font-variation-settings:"opsz" 144;
+  font-variant-numeric:tabular-nums; font-size:1.45rem; font-weight:500; color:#C9A9E4; line-height:1;
+}
+.trayecto-roas .flecha{ font-family:var(--texto); font-size:.9rem; color:var(--sobre-osc-sua); }
+.trayecto-roas .cae{ color:#E0857A; }
+
+.enlace-interno{
+  justify-self:start;
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:var(--texto); font-size:.72rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.11em; text-decoration:none;
+  padding:10px 17px; border-radius:999px;
+  border:1px solid rgba(201,169,228,.4); color:#C9A9E4; background:transparent;
+  transition:background .25s ease, color .25s ease, border-color .25s ease;
+}
+.enlace-interno:hover{ background:#C9A9E4; color:#160A1E; border-color:#C9A9E4; }
+.enlace-interno svg{ flex:none; transition:transform .25s ease; }
+.enlace-interno:hover svg{ transform:translateX(3px); }
+
 /* --- Agencias --- */
 .agencias{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.2vw,18px); }
 .agencia{
@@ -1528,6 +1572,64 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
         <b>Fuentes:</b> Meta Ads Manager y Google Ads, agosto de 2026, cruzados con Google Analytics 4
         y Shopify. El ROAS reclamado de Meta es 5,94x en la cuenta y 7,69x si se toman solo las campañas
         de compra, excluyendo WhatsApp. La visibilidad real verificada de Meta es del 6,1%.
+      </p>
+    </div>
+
+    <div class="recomendacion rev">
+      <p class="marca-rec">Recomendación</p>
+      <h3>Google es el mejor canal de conversión hoy, con una condición</h3>
+
+      <div class="mini-datos" style="margin-top:0; padding-top:0; border-top:0">
+        <div class="mini-dato">
+          <p class="v" data-valor="30.4" data-fmt="pct1">30,4%</p>
+          <p class="t">Visibilidad real de Google</p>
+        </div>
+        <div class="mini-dato">
+          <p class="v" data-valor="6.1" data-fmt="pct1">6,1%</p>
+          <p class="t">Visibilidad real de Meta</p>
+        </div>
+        <div class="mini-dato">
+          <p class="trayecto-roas">
+            <span>3,29x</span><span class="flecha">sin campaña de marca</span><span class="cae">1,80x</span>
+          </p>
+          <p class="t">ROAS verificado de Google</p>
+        </div>
+      </div>
+
+      <p class="texto">
+        Google Ads es la plataforma con <b>mejor visibilidad real</b>, 30,4% contra 6,1% de Meta,
+        y con <b>mejor ROAS verificado</b>, 3,29x. Pero una parte relevante de ese resultado depende
+        de la campaña de búsqueda de marca, Branded Search_FAJITEX, que compite por un término donde
+        Fajitex ya tiene <b>posición 1 orgánica</b>, 1,27 de posición promedio según Google Search Console.
+        Sin esa campaña, el ROAS verificado cae de 3,29x a 1,80x.
+      </p>
+
+      <div class="recomendacion-caja">
+        <p>
+          El siguiente paso no es dejar de invertir en marca, es <b>analizar cuánto de esa inversión
+          es defensiva y necesaria</b> contra cuánto está pagando por clics que hubieran llegado gratis.
+        </p>
+        <p>
+          La oportunidad real de crecimiento en Google está en <b>migrar presupuesto hacia campañas
+          de categoría</b>, fajas postquirúrgicas, fajas post parto, reloj de arena y cinturilla,
+          los mismos términos donde el SEO ya tiene tracción orgánica entre las posiciones 5 y 11.
+          Pagar por demanda de categoría que todavía no se gana orgánicamente tiene mucho más sentido
+          que seguir defendiendo un término ya ganado.
+        </p>
+      </div>
+
+      <a class="enlace-interno" href="#seo">
+        Ver esos términos en la sección de SEO
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <p class="fuente">
+        <b>Fuentes:</b> visibilidad real y ROAS verificado, cruce entre Google Ads, Meta Ads Manager,
+        Google Analytics 4 y Shopify, agosto de 2026. Posición orgánica de la búsqueda de marca,
+        Google Search Console. Posiciones de los términos de categoría, reporte de Consultas de
+        Google Search Console, detalladas en la sección de SEO.
       </p>
     </div>
 
