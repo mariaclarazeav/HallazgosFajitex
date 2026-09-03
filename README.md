@@ -28,22 +28,23 @@ Las cifras que aún no están confirmadas aparecen resaltadas en amarillo con la
 - El hito intermedio del plan escalonado
 - Los montos del checklist de cierre
 
-## Las catorce secciones
+## Las quince secciones
 
 1. Objetivo, la meta escalonada
-2. Shopify, lo que es cierto y medible
-3. Agosto, el resultado oficial de Ventas B2C contra presupuesto
-4. Diagnóstico heredado
-5. La auditoría de tracking, hallazgos y estado
-6. La brecha de ROAS, único quiebre de tono visual de la página
-7. Contraste contra el informe interno de junio de 2026
-8. Comparativo 2025 contra 2026
-9. El patrón que se repite, cuatro agencias
-10. SEO, la oportunidad ya identificada
-11. Lo que dejamos de ganar, y lo que vamos a ganar
-12. El equipo que lo ejecuta
-13. Plan escalonado
-14. Cierre, lo que se necesita de Presidencia
+2. Por qué llegamos hasta aquí, el patrón de fondo
+3. Shopify, lo que es cierto y medible
+4. Agosto, el resultado oficial de Ventas B2C contra presupuesto
+5. Diagnóstico heredado
+6. La auditoría de tracking, hallazgos y estado
+7. La brecha de ROAS, único quiebre de tono visual de la página
+8. Contraste contra el informe interno de junio de 2026
+9. Comparativo 2025 contra 2026
+10. El patrón que se repite, cuatro agencias
+11. SEO, la oportunidad ya identificada
+12. Lo que dejamos de ganar, y lo que vamos a ganar
+13. El equipo que lo ejecuta
+14. Plan escalonado
+15. Cierre, lo que se necesita de Presidencia
 
 ## Detalles técnicos
 
