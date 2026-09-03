@@ -474,17 +474,6 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 }
 .brecha-titular .fuente{ margin-top:20px; max-width:62ch; margin-inline:auto; }
 
-.secuencia{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--linea-osc); border:1px solid var(--linea-osc); border-radius:var(--r-lg); overflow:hidden; }
-.secuencia-celda{ background:rgba(22,10,30,.6); padding:clamp(18px,2vw,26px); display:flex; flex-direction:column; gap:7px; }
-.secuencia-celda .quien{ font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.13em; color:var(--sobre-osc-sua); }
-.secuencia-celda.reclamado .quien{ color:#E0A9A2; }
-.secuencia-celda.verificado .quien{ color:#C9A9E4; }
-.secuencia-celda .v{
-  font-family:var(--display); font-variation-settings:"opsz" 144;
-  font-weight:500; font-variant-numeric:tabular-nums;
-  font-size:clamp(1.5rem,2.4vw,2.1rem); line-height:1; letter-spacing:-.025em; color:#fff;
-}
-.secuencia-celda .sub{ font-size:.8rem; color:var(--sobre-osc-med); font-variant-numeric:tabular-nums; }
 .cita-oscura{ text-align:center; max-width:70ch; margin:clamp(26px,3vw,44px) auto 0; }
 .cita-oscura p{
   font-family:var(--display); font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1;
@@ -610,6 +599,62 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 .enlace-interno:hover{ background:#C9A9E4; color:#160A1E; border-color:#C9A9E4; }
 .enlace-interno svg{ flex:none; transition:transform .25s ease; }
 .enlace-interno:hover svg{ transform:translateX(3px); }
+
+/* --- Tabla de conjuntos por tipo de campaña --- */
+.resumen-cifra{
+  display:grid; grid-template-columns:auto minmax(0,1fr); gap:clamp(18px,2.4vw,36px);
+  align-items:center;
+  border:1px solid rgba(224,133,122,.32); background:rgba(224,133,122,.09);
+  border-radius:var(--r-lg); padding:clamp(20px,2.2vw,30px);
+  margin-bottom:clamp(14px,1.6vw,20px);
+}
+.resumen-cifra .grande{
+  font-family:var(--display); font-variation-settings:"opsz" 144,"SOFT" 40;
+  font-weight:500; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,4.4vw,3.6rem); line-height:.95; letter-spacing:-.035em; color:#E0A9A2;
+}
+.resumen-cifra .detalle{ font-size:.98rem; line-height:1.55; color:var(--sobre-osc); max-width:60ch; }
+.resumen-cifra .detalle b{ color:#fff; font-weight:600; }
+
+.franja-oscura tr.grupo th{
+  font-size:.63rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em;
+  padding-block:9px;
+}
+.franja-oscura tr.grupo.ret th{ background:rgba(224,133,122,.14); color:#E0A9A2; }
+.franja-oscura tr.grupo.pros th{ background:rgba(201,169,228,.14); color:#C9A9E4; }
+.franja-oscura tbody tr.ret th, .franja-oscura tbody tr.ret td{ background:rgba(224,133,122,.05); }
+.franja-oscura tbody tr.pros th, .franja-oscura tbody tr.pros td{ background:rgba(201,169,228,.05); }
+.franja-oscura tbody th.conjunto{ font-size:.8rem; font-weight:600; letter-spacing:-.005em; }
+.chip-tipo{
+  display:inline-block; font-size:.61rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; padding:4px 9px; border-radius:999px; white-space:nowrap;
+}
+.chip-tipo.ret{ background:rgba(224,133,122,.18); color:#E0A9A2; }
+.chip-tipo.pros{ background:rgba(201,169,228,.18); color:#C9A9E4; }
+.tabla-conjuntos{ min-width:0; font-size:.82rem; }
+.tabla-conjuntos th, .tabla-conjuntos td{ padding:10px 11px; }
+.tabla-conjuntos th:first-child, .tabla-conjuntos td:first-child{ padding-left:16px; }
+.tabla-conjuntos th:last-child, .tabla-conjuntos td:last-child{ padding-right:16px; }
+.franja-oscura .tabla-conjuntos tbody th.conjunto{
+  font-size:.77rem; white-space:normal; overflow-wrap:anywhere;
+  min-width:172px; max-width:230px; line-height:1.35;
+}
+.tabla-conjuntos thead th{ font-size:.6rem; letter-spacing:.1em; white-space:normal; line-height:1.3; }
+@media (max-width:1180px){ .tabla-conjuntos{ min-width:700px; } }
+
+.vis{ display:flex; align-items:center; gap:9px; justify-content:flex-end; }
+.vis-barra{
+  width:52px; height:6px; border-radius:999px; flex:none;
+  background:rgba(246,239,249,.13); overflow:hidden;
+}
+.vis-barra i{ display:block; height:100%; width:0; transition:width 1.2s cubic-bezier(.22,.9,.24,1); }
+.vis-barra i.ret{ background:#E0857A; }
+.vis-barra i.pros{ background:#C9A9E4; }
+.lectura-tabla{
+  margin-top:clamp(16px,1.8vw,24px);
+  font-size:.96rem; line-height:1.62; color:var(--sobre-osc-med); max-width:84ch;
+}
+.lectura-tabla b{ color:#fff; font-weight:600; }
 
 /* --- Agencias --- */
 .agencias{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.2vw,18px); }
@@ -769,7 +814,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   .bloques-potencial{ grid-template-columns:1fr; }
 }
 @media (max-width:640px){
-  .r-2,.r-3,.r-4,.agencias,.indicadores,.secuencia{ grid-template-columns:1fr; }
+  .r-2,.r-3,.r-4,.agencias,.indicadores{ grid-template-columns:1fr; }
   .hallazgo{ margin-left:24px; }
   .hallazgo::before{ left:-30px; }
   .linea-tiempo::before{ left:9px; }
@@ -1623,30 +1668,102 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
     </div>
 
     <div class="subtitulo-bloque rev">
-      <h3>La campaña de mayor discrepancia, cifra por cifra</h3>
-      <span>CBO_COL_PRO_SHORTS, agosto de 2026</span>
+      <h3>El problema no es parejo, está concentrado en retargeting</h3>
+      <span>Los siete conjuntos de anuncios con coincidencia en GA4, agosto de 2026</span>
     </div>
 
-    <div class="secuencia">
-      <div class="secuencia-celda reclamado rev" style="--d:0ms">
-        <p class="quien">Reclamado por la agencia</p>
-        <p class="v" data-valor="17021199" data-fmt="cop">$17.021.199</p>
-        <p class="sub">83 compras</p>
-        <p class="fuente"><b>Fuente:</b> Meta Ads Manager, nivel conjunto de anuncios.</p>
-      </div>
-      <div class="secuencia-celda verificado rev" style="--d:450ms">
-        <p class="quien">Verificado en GA4</p>
-        <p class="v" data-valor="275800" data-fmt="cop">$275.800</p>
-        <p class="sub">2 transacciones</p>
-        <p class="fuente"><b>Fuente:</b> Google Analytics 4, ingresos por medio de sesión.</p>
-      </div>
-      <div class="secuencia-celda verificado rev" style="--d:900ms">
-        <p class="quien">Verificado en Shopify</p>
-        <p class="v" data-valor="303800" data-fmt="cop">$303.800</p>
-        <p class="sub">2 pedidos</p>
-        <p class="fuente"><b>Fuente:</b> Shopify, atribución de pedido por UTM.</p>
-      </div>
+    <div class="resumen-cifra rev">
+      <span class="grande">9% a 22%</span>
+      <p class="detalle">
+        <b>Visibilidad real en las campañas de retargeting de Meta</b>, el foco del problema,
+        contra 50% a 100% en las de prospección.
+      </p>
     </div>
+
+    <div class="tabla-envoltura rev" style="--d:60ms">
+      <table class="tabla-conjuntos">
+        <thead>
+          <tr>
+            <th scope="col">Conjunto de anuncios</th>
+            <th scope="col">Tipo</th>
+            <th scope="col" class="num">Reclamado por Meta</th>
+            <th scope="col" class="num">Verificado en GA4</th>
+            <th scope="col" class="num">Verificado en Shopify</th>
+            <th scope="col" class="num">Visibilidad real</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grupo ret"><th scope="colgroup" colspan="6">Retargeting, tres conjuntos</th></tr>
+          <tr class="ret">
+            <th scope="row" class="conjunto">19/03_RET_Shorts</th>
+            <td><span class="chip-tipo ret">Retargeting</span></td>
+            <td class="num">$19.729.014</td><td class="num">$580.600</td><td class="num">$1.820.900</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="ret" data-pct="9.2"></i></span>9,2%</span></td>
+          </tr>
+          <tr class="ret">
+            <th scope="row" class="conjunto">26/12_RMK_Shorts</th>
+            <td><span class="chip-tipo ret">Retargeting</span></td>
+            <td class="num">$15.302.096</td><td class="num">$1.501.440</td><td class="num">$3.351.340</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="ret" data-pct="21.9"></i></span>21,9%</span></td>
+          </tr>
+          <tr class="ret">
+            <th scope="row" class="conjunto">19/03_RET_Fajas</th>
+            <td><span class="chip-tipo ret">Retargeting</span></td>
+            <td class="num">$17.010.692</td><td class="num">$1.085.600</td><td class="num">$1.712.300</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="ret" data-pct="10.1"></i></span>10,1%</span></td>
+          </tr>
+
+          <tr class="grupo pros"><th scope="colgroup" colspan="6">Prospección, cuatro conjuntos</th></tr>
+          <tr class="pros">
+            <th scope="row" class="conjunto">29/07_SHORTS_ANGULO_TRANSFORMACION</th>
+            <td><span class="chip-tipo pros">Prospección</span></td>
+            <td class="num">$13.408.970</td><td class="num">$5.524.200</td><td class="num">$8.692.600</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="pros" data-pct="64.8"></i></span>64,8%</span></td>
+          </tr>
+          <tr class="pros">
+            <th scope="row" class="conjunto">29/07_FAJAS_ANGULO_TRANSFORMACION_(MIN 15%)</th>
+            <td><span class="chip-tipo pros">Prospección</span></td>
+            <td class="num">$1.374.710</td><td class="num">$513.700</td><td class="num">$684.600</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="pros" data-pct="49.8"></i></span>49,8%</span></td>
+          </tr>
+          <tr class="pros">
+            <th scope="row" class="conjunto">29/07_CINTURILLA_ANGULO_TRANSFORMACION_(MIN 15%)</th>
+            <td><span class="chip-tipo pros">Prospección</span></td>
+            <td class="num">$621.700</td><td class="num">$355.800</td><td class="num">$622.700</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="pros" data-pct="100"></i></span>100,2%</span></td>
+          </tr>
+          <tr class="pros">
+            <th scope="row" class="conjunto">21/08_SHORTS_ANGULO_MECANISMO_USP</th>
+            <td><span class="chip-tipo pros">Prospección</span></td>
+            <td class="num">$602.600</td><td class="num">$275.800</td><td class="num">$303.800</td>
+            <td class="num"><span class="vis"><span class="vis-barra"><i class="pros" data-pct="50.4"></i></span>50,4%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="lectura-tabla rev">
+      Los tres conjuntos de retargeting, la venta más inmediata y fácil de justificar en el corto plazo,
+      tienen <b>la visibilidad más baja de toda la cuenta, entre 9% y 22%</b>.
+      Los conjuntos de prospección, que construyen demanda futura, verifican entre 50% y 100%.
+      El patrón técnico confirma el patrón de fondo, se invirtió más en exprimir la venta del día
+      que en construir resultados sostenibles.
+    </p>
+
+    <p class="fuente rev" style="margin-top:14px; max-width:84ch">
+      <b>Nota de rigor:</b> Google Analytics 4 y Shopify no siempre coinciden entre sí de forma exacta,
+      en la mayoría de los casos GA4 muestra entre un tercio y tres cuartas partes de lo que confirma Shopify.
+      Shopify, al ser un registro directo de la transacción, se toma como la referencia más cercana
+      a la venta real. Ambas fuentes, sin embargo, coinciden en estar muy por debajo de lo reclamado
+      por Meta en los tres conjuntos de retargeting.
+    </p>
+
+    <p class="fuente rev" style="margin-top:10px; max-width:84ch">
+      <b>Fuentes:</b> reclamado, Meta Ads Manager a nivel de conjunto de anuncios.
+      Verificado en GA4, ingresos por medio de sesión. Verificado en Shopify, atribución de pedido por UTM.
+      <b>Cálculo de la visibilidad real:</b> ingresos verificados en Shopify divididos por el valor
+      reclamado por Meta para el mismo conjunto.
+    </p>
 
     <div class="cita-oscura rev" style="--d:1200ms">
       <p>En la campaña de mayor discrepancia, dos fuentes de medición completamente independientes
@@ -2621,7 +2738,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
         obs.unobserve(x.target);
         x.target.style.width = Math.min(100, parseFloat(x.target.dataset.pct)) + "%";
       });
-    }, { threshold:.3 });
+    }, { threshold:0, rootMargin:"0px 0px -8% 0px" });
     document.querySelectorAll("[data-pct]").forEach(el => { el.style.width = "0%"; obs.observe(el); });
   }
 
