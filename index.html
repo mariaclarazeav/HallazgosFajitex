@@ -493,6 +493,37 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   border-left:2px solid #C9A9E4; padding-left:14px; max-width:70ch;
 }
 
+/* --- Paneles pequeños de unidades por mes --- */
+.leyenda-compartida{
+  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+  margin-bottom:clamp(12px,1.4vw,18px);
+}
+.leyenda-compartida span{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:.78rem; font-weight:600; color:var(--gris);
+}
+.leyenda-compartida i{ width:16px; height:3px; border-radius:2px; flex:none; }
+.leyenda-compartida i.a2025{ background:var(--nude-osc); }
+.leyenda-compartida i.a2026{ background:var(--morado); }
+.leyenda-compartida em{ font-style:normal; font-size:.75rem; color:var(--gris-sua); font-weight:400; }
+
+.paneles-mini{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(12px,1.2vw,18px); }
+.panel-mini{
+  background:var(--blanco); border:1px solid var(--linea); border-radius:var(--r-md);
+  padding:clamp(15px,1.5vw,20px);
+}
+.panel-mini-cab{
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  padding-bottom:11px; margin-bottom:11px; border-bottom:1px solid var(--linea);
+}
+.panel-mini-cab h4{ font-family:var(--texto); font-size:.98rem; font-weight:700; letter-spacing:-.005em; }
+.panel-mini-cab .totales{
+  font-size:.78rem; color:var(--gris-sua); font-variant-numeric:tabular-nums;
+  display:inline-flex; align-items:center; gap:9px;
+}
+.panel-mini-cab .totales b{ color:var(--negro); font-weight:600; }
+.lienzo-mini{ position:relative; height:172px; }
+
 /* --- Migración de canal por línea --- */
 .tabla-lineas td.var{ font-weight:700; }
 .var-sube{ color:var(--ok); }
@@ -1462,51 +1493,119 @@ tbody tr.ojo th.linea::before{
       </div>
     </div>
 
-    <div class="tabla-envoltura rev" style="--d:60ms">
-      <table class="tabla-lineas">
-        <caption>Variación de unidades vendidas de enero a agosto, 2026 contra 2025.</caption>
-        <thead>
-          <tr>
-            <th scope="col">Línea de producto</th>
-            <th scope="col" class="num">WhatsApp</th>
-            <th scope="col" class="num">Web</th>
-            <th scope="col" class="num">Combinado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" class="linea">Fajas</th>
-            <td class="num var var-baja">−20,3%</td>
-            <td class="num var var-sube">+38,8%</td>
-            <td class="num var var-baja">−6,7%</td>
-          </tr>
-          <tr class="ojo">
-            <th scope="row" class="linea">Cinturilla <span class="marca-linea">La excepción</span></th>
-            <td class="num var var-baja">−35,6%</td>
-            <td class="num var var-baja">−37,0%</td>
-            <td class="num var var-baja">−36,2%</td>
-          </tr>
-          <tr>
-            <th scope="row" class="linea">Short</th>
-            <td class="num var var-baja">−11,4%</td>
-            <td class="num var var-sube">+52,8%</td>
-            <td class="num var var-sube">+10,6%</td>
-          </tr>
-          <tr>
-            <th scope="row" class="linea">Brasier</th>
-            <td class="num var var-baja">−36,6%</td>
-            <td class="num var var-sube">+61,5%</td>
-            <td class="num var var-baja">−12,8%</td>
-          </tr>
-          <tr class="total">
-            <th scope="row" class="linea">Total de las cuatro líneas</th>
-            <td class="num var var-baja">−19,0%</td>
-            <td class="num var var-sube">+35,5%</td>
-            <td class="num var var-neutra">−2,7%</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="subtitulo-bloque rev">
+      <h3>Unidades vendidas por mes, los dos canales sumados, 2025 contra 2026</h3>
+      <span>Enero a agosto, unidades absolutas</span>
     </div>
+
+    <p class="leyenda-compartida rev">
+      <span><i class="a2025"></i>2025</span>
+      <span><i class="a2026"></i>2026</span>
+      <em>Los cuatro paneles comparten la misma escala vertical, para que el volumen de cada línea sea comparable entre sí.</em>
+    </p>
+
+    <div class="paneles-mini rev" style="--d:60ms">
+      <article class="panel-mini">
+        <div class="panel-mini-cab">
+          <h4>Fajas</h4>
+          <span class="totales"><b>2.908</b> a <b>2.712</b> <span class="var var-baja">−6,7%</span></span>
+        </div>
+        <div class="lienzo-mini">
+          <canvas id="graficoFajas" role="img" aria-label="Unidades de Fajas por mes, 2025 contra 2026, de 2.908 a 2.712 unidades en el acumulado"></canvas>
+        </div>
+      </article>
+      <article class="panel-mini">
+        <div class="panel-mini-cab">
+          <h4>Cinturilla</h4>
+          <span class="totales"><b>646</b> a <b>412</b> <span class="var var-baja">−36,2%</span></span>
+        </div>
+        <div class="lienzo-mini">
+          <canvas id="graficoCinturilla" role="img" aria-label="Unidades de Cinturilla por mes, 2025 contra 2026, de 646 a 412 unidades en el acumulado"></canvas>
+        </div>
+      </article>
+      <article class="panel-mini">
+        <div class="panel-mini-cab">
+          <h4>Short</h4>
+          <span class="totales"><b>2.794</b> a <b>3.089</b> <span class="var var-sube">+10,6%</span></span>
+        </div>
+        <div class="lienzo-mini">
+          <canvas id="graficoShort" role="img" aria-label="Unidades de Short por mes, 2025 contra 2026, de 2.794 a 3.089 unidades en el acumulado"></canvas>
+        </div>
+      </article>
+      <article class="panel-mini">
+        <div class="panel-mini-cab">
+          <h4>Brasier</h4>
+          <span class="totales"><b>375</b> a <b>327</b> <span class="var var-baja">−12,8%</span></span>
+        </div>
+        <div class="lienzo-mini">
+          <canvas id="graficoBrasier" role="img" aria-label="Unidades de Brasier por mes, 2025 contra 2026, de 375 a 327 unidades en el acumulado"></canvas>
+        </div>
+      </article>
+    </div>
+    <div class="sin-grafico" id="sinGraficoLineas" hidden style="position:static; margin-top:14px">
+      No se pudo cargar la librería de gráficos. Los datos están en la tabla de abajo.
+    </div>
+
+    <p class="parrafo ancho rev" style="margin-top:clamp(18px,2vw,26px)">
+      En unidades absolutas, <b style="color:var(--negro); font-weight:600">Fajas y Short son las líneas
+      que más peso tienen en el negocio</b>, varias veces el volumen de Cinturilla o Brasier.
+      Eso significa que la caída de Cinturilla, aunque porcentualmente es la más grave,
+      mueve muchas menos unidades en términos absolutos que
+      <b style="color:var(--negro); font-weight:600">el deterioro de Fajas en julio y agosto</b>,
+      que sí representa un volumen considerable perdido en la línea más grande del catálogo.
+    </p>
+
+    <details class="tabla-datos rev" style="margin-top:clamp(16px,1.8vw,24px)">
+      <summary>Ver la tabla de unidades mes a mes</summary>
+      <div class="tabla-envoltura">
+        <table class="tabla-conjuntos">
+          <thead>
+            <tr>
+              <th scope="col">Mes</th>
+              <th scope="col" class="num">Fajas 2025</th><th scope="col" class="num">Fajas 2026</th>
+              <th scope="col" class="num">Cinturilla 2025</th><th scope="col" class="num">Cinturilla 2026</th>
+              <th scope="col" class="num">Short 2025</th><th scope="col" class="num">Short 2026</th>
+              <th scope="col" class="num">Brasier 2025</th><th scope="col" class="num">Brasier 2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Enero</th><td class="num">293</td><td class="num">391</td><td class="num">41</td><td class="num">63</td><td class="num">388</td><td class="num">389</td><td class="num">37</td><td class="num">39</td></tr>
+            <tr><th scope="row">Febrero</th><td class="num">383</td><td class="num">327</td><td class="num">34</td><td class="num">49</td><td class="num">255</td><td class="num">308</td><td class="num">55</td><td class="num">41</td></tr>
+            <tr><th scope="row">Marzo</th><td class="num">366</td><td class="num">360</td><td class="num">49</td><td class="num">70</td><td class="num">292</td><td class="num">402</td><td class="num">43</td><td class="num">42</td></tr>
+            <tr><th scope="row">Abril</th><td class="num">309</td><td class="num">356</td><td class="num">93</td><td class="num">51</td><td class="num">472</td><td class="num">295</td><td class="num">72</td><td class="num">52</td></tr>
+            <tr><th scope="row">Mayo</th><td class="num">325</td><td class="num">354</td><td class="num">181</td><td class="num">31</td><td class="num">330</td><td class="num">418</td><td class="num">66</td><td class="num">19</td></tr>
+            <tr><th scope="row">Junio</th><td class="num">325</td><td class="num">310</td><td class="num">85</td><td class="num">53</td><td class="num">313</td><td class="num">377</td><td class="num">35</td><td class="num">55</td></tr>
+            <tr><th scope="row">Julio</th><td class="num">477</td><td class="num">335</td><td class="num">66</td><td class="num">48</td><td class="num">397</td><td class="num">433</td><td class="num">35</td><td class="num">41</td></tr>
+            <tr><th scope="row">Agosto</th><td class="num">430</td><td class="num">279</td><td class="num">97</td><td class="num">47</td><td class="num">347</td><td class="num">467</td><td class="num">32</td><td class="num">38</td></tr>
+            <tr class="total"><th scope="row">Total</th><td class="num">2.908</td><td class="num">2.712</td><td class="num">646</td><td class="num">412</td><td class="num">2.794</td><td class="num">3.089</td><td class="num">375</td><td class="num">327</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="tabla-datos rev" style="margin-top:10px">
+      <summary>Ver la variación por canal, que sostiene la lectura de migración</summary>
+      <div class="tabla-envoltura">
+        <table class="tabla-lineas">
+          <caption>Variación de unidades vendidas de enero a agosto, 2026 contra 2025, por canal comercial.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Línea de producto</th>
+              <th scope="col" class="num">WhatsApp</th>
+              <th scope="col" class="num">Web</th>
+              <th scope="col" class="num">Combinado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" class="linea">Fajas</th><td class="num var var-baja">−20,3%</td><td class="num var var-sube">+38,8%</td><td class="num var var-baja">−6,7%</td></tr>
+            <tr class="ojo"><th scope="row" class="linea">Cinturilla <span class="marca-linea">La excepción</span></th><td class="num var var-baja">−35,6%</td><td class="num var var-baja">−37,0%</td><td class="num var var-baja">−36,2%</td></tr>
+            <tr><th scope="row" class="linea">Short</th><td class="num var var-baja">−11,4%</td><td class="num var var-sube">+52,8%</td><td class="num var var-sube">+10,6%</td></tr>
+            <tr><th scope="row" class="linea">Brasier</th><td class="num var var-baja">−36,6%</td><td class="num var var-sube">+61,5%</td><td class="num var var-baja">−12,8%</td></tr>
+            <tr class="total"><th scope="row" class="linea">Total de las cuatro líneas</th><td class="num var var-baja">−19,0%</td><td class="num var var-sube">+35,5%</td><td class="num var var-neutra">−2,7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
 
     <div class="cita rev">
       <p>
@@ -2819,6 +2918,21 @@ tbody tr.ojo th.linea::before{
     valores:[5.94,10.84,3.29,1.80],
     verificado:[false,false,true,true]
   };
+  const LINEAS = {
+    meses:["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"],
+    tope:500,
+    series:[
+      { id:"graficoFajas",      nombre:"Fajas",
+        a2025:[293,383,366,309,325,325,477,430], a2026:[391,327,360,356,354,310,335,279] },
+      { id:"graficoCinturilla", nombre:"Cinturilla",
+        a2025:[41,34,49,93,181,85,66,97],        a2026:[63,49,70,51,31,53,48,47] },
+      { id:"graficoShort",      nombre:"Short",
+        a2025:[388,255,292,472,330,313,397,347], a2026:[389,308,402,295,418,377,433,467] },
+      { id:"graficoBrasier",    nombre:"Brasier",
+        a2025:[37,55,43,72,66,35,35,32],         a2026:[39,41,42,52,19,55,41,38] }
+    ]
+  };
+
   const SEO = [
     { kw:"fajas",                  pos:7.03, imp:38602 },
     { kw:"cinturilla",             pos:7.36, imp:14619 },
@@ -3161,6 +3275,48 @@ tbody tr.ojo th.linea::before{
     });
   }
 
+  function pintarLineas(){
+    if(!hayChart()){ document.getElementById("sinGraficoLineas").hidden = false; return; }
+    LINEAS.series.forEach(serie => {
+      const lienzo = document.getElementById(serie.id);
+      if(!lienzo) return;
+      if(graficos[serie.id]) graficos[serie.id].destroy();
+      graficos[serie.id] = new Chart(lienzo.getContext("2d"), {
+        type:"line",
+        data:{
+          labels: LINEAS.meses,
+          datasets:[
+            { label:"2025", data:serie.a2025, borderColor:C.nudeOsc, backgroundColor:C.nudeOsc,
+              borderWidth:2, tension:0, pointRadius:2.5, pointHoverRadius:5, hitRadius:12 },
+            { label:"2026", data:serie.a2026, borderColor:C.morado, backgroundColor:C.morado,
+              borderWidth:2, tension:0, pointRadius:2.5, pointHoverRadius:5, hitRadius:12 }
+          ]
+        },
+        options:{
+          responsive:true, maintainAspectRatio:false,
+          animation:{ duration: reducir ? 0 : 850, easing:"easeOutQuart" },
+          interaction:{ mode:"index", intersect:false },
+          plugins:{
+            legend:{ display:false },
+            tooltip:Object.assign(tooltipBase(false), {
+              callbacks:{
+                title:(items) => serie.nombre + ", " + items[0].label,
+                label:(it) => it.dataset.label + ": " + entero.format(it.parsed.y) + " unidades"
+              } })
+          },
+          scales:{
+            x:{ grid:{ display:false }, border:{ color:C.linea },
+                ticks:{ color:C.grisSua, font:{ family:"'Instrument Sans', sans-serif", size:10.5 }, padding:6 } },
+            y:{ beginAtZero:true, suggestedMax:LINEAS.tope,
+                grid:{ color:C.linea, drawTicks:false }, border:{ display:false },
+                ticks:{ color:C.grisSua, font:{ family:"'Instrument Sans', sans-serif", size:10.5 },
+                        padding:8, maxTicksLimit:5, callback:(v) => entero.format(v) } }
+          }
+        }
+      });
+    });
+  }
+
   function pintarSeo(){
     if(!hayChart()) return faltaGrafico("sinGraficoSeo","graficoSeo");
     if(graficos.seo) graficos.seo.destroy();
@@ -3200,7 +3356,7 @@ tbody tr.ojo th.linea::before{
   }
 
   function pintarTodos(){
-    pintarCanales(); pintarCascada(); pintarCampanas(); pintarPlataformas(); pintarSeo();
+    pintarCanales(); pintarLineas(); pintarCascada(); pintarCampanas(); pintarPlataformas(); pintarSeo();
   }
 
   /* ==========================================================
