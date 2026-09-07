@@ -493,6 +493,28 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   border-left:2px solid #C9A9E4; padding-left:14px; max-width:70ch;
 }
 
+/* --- Migración de canal por línea --- */
+.tabla-lineas td.var{ font-weight:700; }
+.var-sube{ color:var(--ok); }
+.var-baja{ color:var(--critico); }
+.var-neutra{ color:var(--gris-sua); }
+tbody tr.ojo th, tbody tr.ojo td{ background:var(--critico-bg); }
+tbody tr.ojo th.linea{ position:relative; }
+tbody tr.ojo th.linea::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--critico);
+}
+.marca-linea{
+  display:inline-block; margin-left:9px; font-family:var(--texto);
+  font-size:.58rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--critico); background:var(--blanco); border:1px solid #F0CFCB;
+  padding:3px 8px; border-radius:999px; vertical-align:.1em;
+}
+.enlace-interno.claro{
+  border-color:var(--morado-linea); color:var(--morado);
+  padding:8px 14px; font-size:.68rem;
+}
+.enlace-interno.claro:hover{ background:var(--morado); color:#fff; border-color:var(--morado); }
+
 /* --- Condiciones de contexto --- */
 .condiciones{ display:grid; gap:clamp(13px,1.4vw,19px); }
 .condicion{
@@ -590,7 +612,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 .enlace-interno{
   justify-self:start;
   display:inline-flex; align-items:center; gap:9px;
-  font-family:var(--texto); font-size:.72rem; font-weight:700;
+  font-family:var(--texto); font-size:.72rem; font-weight:700; font-style:normal;
   text-transform:uppercase; letter-spacing:.11em; text-decoration:none;
   padding:10px 17px; border-radius:999px;
   border:1px solid rgba(201,169,228,.4); color:#C9A9E4; background:transparent;
@@ -797,6 +819,12 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
 }
 
 /* --- Adaptable --- */
+@media (max-width:1560px){
+  .nav{ gap:12px; }
+  .nav-enlaces a{ padding:7px 7px; letter-spacing:.055em; font-size:.645rem; }
+  .marca{ padding-right:8px; }
+  .marca-texto{ font-size:1.24rem; }
+}
 @media (max-width:1140px){
   .hero-grid{ grid-template-columns:1fr; }
   .indicadores{ grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -849,6 +877,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
     <a href="#contexto">Contexto</a>
     <a href="#shopify">Shopify</a>
     <a href="#agosto">Agosto</a>
+    <a href="#migracion">Migración</a>
     <a href="#diagnostico">Diagnóstico</a>
     <a href="#auditoria">Auditoría</a>
     <a href="#brecha">Brecha ROAS</a>
@@ -1415,7 +1444,135 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 5. DIAGNÓSTICO ============ -->
+<!-- ============ 5. MIGRACIÓN DE CANAL ============ -->
+<section id="migracion" class="borde-arriba tinte-morado">
+  <div class="wrap">
+    <div class="cabecera-seccion rev">
+      <p class="eyebrow">Migración de canal</p>
+      <h2 class="h-seccion">La migración de canal, por línea de producto</h2>
+      <p class="parrafo ancho">
+        La sección anterior muestra el mes contra su presupuesto. Esta muestra qué está pasando
+        por debajo de esa cifra, línea por línea, y explica buena parte de lo que a primera vista
+        parece una caída del negocio.
+      </p>
+      <div class="fuente-seccion">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 7.2v4M8 4.6v.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <p><b>Fuente de toda la sección:</b> comparativo de unidades vendidas de enero a agosto,
+        2025 contra 2026, por línea de producto y canal comercial, Equipo de WhatsApp y Sitio Web, en Shopify.</p>
+      </div>
+    </div>
+
+    <div class="tabla-envoltura rev" style="--d:60ms">
+      <table class="tabla-lineas">
+        <caption>Variación de unidades vendidas de enero a agosto, 2026 contra 2025.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Línea de producto</th>
+            <th scope="col" class="num">WhatsApp</th>
+            <th scope="col" class="num">Web</th>
+            <th scope="col" class="num">Combinado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="linea">Fajas</th>
+            <td class="num var var-baja">−20,3%</td>
+            <td class="num var var-sube">+38,8%</td>
+            <td class="num var var-baja">−6,7%</td>
+          </tr>
+          <tr class="ojo">
+            <th scope="row" class="linea">Cinturilla <span class="marca-linea">La excepción</span></th>
+            <td class="num var var-baja">−35,6%</td>
+            <td class="num var var-baja">−37,0%</td>
+            <td class="num var var-baja">−36,2%</td>
+          </tr>
+          <tr>
+            <th scope="row" class="linea">Short</th>
+            <td class="num var var-baja">−11,4%</td>
+            <td class="num var var-sube">+52,8%</td>
+            <td class="num var var-sube">+10,6%</td>
+          </tr>
+          <tr>
+            <th scope="row" class="linea">Brasier</th>
+            <td class="num var var-baja">−36,6%</td>
+            <td class="num var var-sube">+61,5%</td>
+            <td class="num var var-baja">−12,8%</td>
+          </tr>
+          <tr class="total">
+            <th scope="row" class="linea">Total de las cuatro líneas</th>
+            <td class="num var var-baja">−19,0%</td>
+            <td class="num var var-sube">+35,5%</td>
+            <td class="num var var-neutra">−2,7%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cita rev">
+      <p>
+        Sumando los dos canales, las cuatro líneas más importantes del catálogo están
+        prácticamente planas, no en declive.
+      </p>
+      <p class="fuente" style="font-size:.93rem; color:var(--gris); line-height:1.6; margin-top:14px; max-width:82ch">
+        Lo que está ocurriendo es una migración real de ventas desde WhatsApp hacia el sitio web,
+        consistente en tres de las cuatro líneas. El canal que más pesa en el negocio tiene una
+        conversión crítica documentada, del 10,2%, lo que explica parte de esta migración.
+      </p>
+      <p style="margin-top:16px">
+        <a class="enlace-interno claro" href="#agosto">
+          Ver la conversión de WhatsApp en la sección anterior
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </p>
+    </div>
+
+    <div class="alerta rev" style="margin-top:clamp(18px,2vw,26px)">
+      <svg class="icono" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 3.5 22 20H2L12 3.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M12 10v4.4M12 17.1v.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3>Cinturilla es la excepción, y no es migración</h3>
+        <p>
+          Es la única línea donde caen los dos canales a la vez, sin que ninguno compense al otro,
+          <b>−36,2% combinado</b>. A diferencia de las otras tres líneas, esto no es migración de canal,
+          es pérdida de tracción real.
+        </p>
+        <p style="margin-top:11px">
+          La categoría además tiene demanda de búsqueda orgánica activa, <b>14.619 impresiones
+          en 6 meses y posición 7,36</b> en Google Search Console, lo que sugiere que el problema
+          está entre la búsqueda y la compra, no en la falta de interés.
+        </p>
+        <p style="margin-top:14px">
+          <a class="enlace-interno claro" href="#seo">
+            Ver esa palabra clave en la sección de SEO
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="aparte rev" style="margin-top:clamp(14px,1.6vw,20px)">
+      <p class="marca-aparte">Investigación en curso</p>
+      <h3>Tres hipótesis para la caída de Cinturilla</h3>
+      <p class="texto">
+        Se investigaron tres hipótesis: disponibilidad de inventario, inversión en pauta dedicada,
+        y cambios de precio. <b>La hipótesis de inventario no se pudo confirmar ni descartar</b>,
+        el reporte disponible no permite aislar quiebres de stock por ubicación de despacho,
+        dado que la operación despacha desde múltiples ubicaciones.
+      </p>
+      <p class="texto">
+        Pauta dedicada y precio promedio quedan como próximos pasos de verificación.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. DIAGNÓSTICO ============ -->
 <section id="diagnostico" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1493,7 +1650,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 6. AUDITORÍA ============ -->
+<!-- ============ 7. AUDITORÍA ============ -->
 <section id="auditoria" class="borde-arriba tinte-nude">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -1587,7 +1744,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 7. BRECHA DE ROAS ============ -->
+<!-- ============ 8. BRECHA DE ROAS ============ -->
 <section id="brecha" class="franja-oscura">
   <div class="wrap">
     <div class="cabecera-seccion rev" style="max-width:none; margin-bottom:0">
@@ -1873,7 +2030,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 8. CONTRASTE CONTRA EL INFORME DE JUNIO ============ -->
+<!-- ============ 9. CONTRASTE CONTRA EL INFORME DE JUNIO ============ -->
 <section id="informe-junio" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2037,7 +2194,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 9. COMPARATIVO 2025 vs 2026 ============ -->
+<!-- ============ 10. COMPARATIVO 2025 vs 2026 ============ -->
 <section id="comparativo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2137,7 +2294,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 10. AGENCIAS ============ -->
+<!-- ============ 11. AGENCIAS ============ -->
 <section id="agencias" class="borde-arriba tinte-nude">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2203,7 +2360,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 11. SEO ============ -->
+<!-- ============ 12. SEO ============ -->
 <section id="seo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2286,7 +2443,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 12. POTENCIAL ============ -->
+<!-- ============ 13. POTENCIAL ============ -->
 <section id="potencial" class="borde-arriba tinte-morado">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2357,7 +2514,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 13. EQUIPO ============ -->
+<!-- ============ 14. EQUIPO ============ -->
 <section id="equipo" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2458,7 +2615,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 14. PLAN ============ -->
+<!-- ============ 15. PLAN ============ -->
 <section id="plan" class="borde-arriba tinte-nude">
   <div class="wrap">
     <div class="cabecera-seccion rev">
@@ -2563,7 +2720,7 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   </div>
 </section>
 
-<!-- ============ 15. CIERRE ============ -->
+<!-- ============ 16. CIERRE ============ -->
 <section id="cierre" class="borde-arriba">
   <div class="wrap">
     <div class="cabecera-seccion rev">
