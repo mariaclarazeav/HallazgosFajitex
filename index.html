@@ -493,6 +493,52 @@ details.tabla-datos .tabla-envoltura{ margin-top:12px; }
   border-left:2px solid #C9A9E4; padding-left:14px; max-width:70ch;
 }
 
+/* --- Lectura de proporcionalidad entre canales --- */
+.lectura-clave{
+  background:var(--morado-cl); border:1px solid var(--morado-linea);
+  border-left:3px solid var(--morado); border-radius:0 var(--r-lg) var(--r-lg) 0;
+  padding:clamp(20px,2.2vw,30px); display:grid; gap:15px;
+}
+.lectura-clave h3{ font-family:var(--texto); font-size:1.08rem; font-weight:700; line-height:1.3; }
+.lectura-clave .texto{ font-size:.95rem; color:var(--gris); line-height:1.62; max-width:84ch; }
+.lectura-clave .texto b{ color:var(--negro); font-weight:600; }
+.peso-canal{
+  display:flex; align-items:center; gap:clamp(12px,1.6vw,22px); flex-wrap:wrap;
+  padding:15px 0; border-block:1px solid var(--morado-linea);
+}
+.peso-canal .valor{
+  font-family:var(--display); font-variation-settings:"opsz" 144;
+  font-weight:500; font-variant-numeric:tabular-nums;
+  font-size:clamp(1.7rem,2.6vw,2.3rem); line-height:1; letter-spacing:-.025em; color:var(--morado);
+}
+.peso-canal .flecha{ color:var(--gris-sua); font-size:1rem; }
+.peso-canal .caida{
+  font-family:var(--texto); font-size:.82rem; font-weight:700;
+  background:var(--critico-bg); color:var(--critico);
+  padding:5px 11px; border-radius:999px; white-space:nowrap;
+}
+.peso-canal .glosa{ font-size:.83rem; color:var(--gris); max-width:34ch; line-height:1.45; }
+.puntos-linea{ display:flex; gap:9px; flex-wrap:wrap; }
+.punto-chip{
+  display:inline-flex; align-items:baseline; gap:7px;
+  border:1px solid var(--morado-linea); background:var(--blanco);
+  border-radius:999px; padding:7px 13px; font-size:.82rem; color:var(--gris);
+}
+.punto-chip b{ color:var(--critico); font-weight:700; font-variant-numeric:tabular-nums; }
+.punto-chip.estable b{ color:var(--gris-sua); }
+
+.pregunta-abierta{
+  margin-top:clamp(14px,1.6vw,20px);
+  border:1px solid var(--linea); border-left:3px solid var(--nude-osc);
+  background:var(--blanco); border-radius:0 var(--r-lg) var(--r-lg) 0;
+  padding:clamp(20px,2.2vw,30px); display:grid; gap:13px;
+}
+.pregunta-abierta .marca-preg{
+  font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--nude-osc);
+}
+.pregunta-abierta p{ font-size:.95rem; color:var(--gris); line-height:1.62; max-width:84ch; }
+.pregunta-abierta p b{ color:var(--negro); font-weight:600; }
+
 /* --- Paneles pequeños de unidades por mes --- */
 .leyenda-compartida{
   display:flex; align-items:center; gap:20px; flex-wrap:wrap;
@@ -1607,19 +1653,59 @@ tbody tr.ojo th.linea::before{
       </div>
     </details>
 
-    <div class="cita rev">
+    <div class="lectura-clave rev">
+      <h3>El problema no es el total, es que la proporción entre canales se rompió</h3>
+
+      <p class="texto">
+        La dirección espera que ambos canales crezcan de forma proporcional, manteniendo su peso
+        relativo, no que uno compense al otro mientras cambia la mezcla.
+        Medido así, el hallazgo es más serio de lo que sugiere el total combinado.
+      </p>
+
+      <div class="peso-canal">
+        <span class="valor">70,2%</span>
+        <span class="flecha">→</span>
+        <span class="valor">58,5%</span>
+        <span class="caida">−11,7 puntos</span>
+        <span class="glosa">Peso de WhatsApp en el volumen de las cuatro líneas, en ocho meses.</span>
+      </div>
+
+      <p class="texto">
+        La pérdida de peso relativo ocurre de forma más marcada en estas tres líneas:
+      </p>
+      <div class="puntos-linea">
+        <span class="punto-chip">Brasier <b>−20,7 puntos</b></span>
+        <span class="punto-chip">Short <b>−13,1 puntos</b></span>
+        <span class="punto-chip">Fajas <b>−11,2 puntos</b></span>
+        <span class="punto-chip estable">Cinturilla <b>estable</b></span>
+      </div>
+
+      <p class="texto">
+        <b>Cinturilla es la única línea donde el peso entre canales se mantuvo estable</b>,
+        pero porque los dos canales caen casi al mismo ritmo, no porque ambos estén creciendo.
+      </p>
+
+      <p class="fuente">
+        <b>Fuente:</b> participación de cada canal en el volumen de unidades por línea,
+        Equipo de WhatsApp y Sitio Web, enero a agosto de 2025 contra 2026, en Shopify.
+        El desglose por canal está en el desplegable de arriba.
+      </p>
+    </div>
+
+    <div class="pregunta-abierta rev">
+      <p class="marca-preg">La pregunta que esto plantea</p>
       <p>
-        Sumando los dos canales, las cuatro líneas más importantes del catálogo están
-        prácticamente planas, no en declive.
+        No es solo por qué cae Cinturilla, es <b>por qué WhatsApp está perdiendo peso relativo
+        en las otras tres líneas mientras web gana</b>.
       </p>
-      <p class="fuente" style="font-size:.93rem; color:var(--gris); line-height:1.6; margin-top:14px; max-width:82ch">
-        Lo que está ocurriendo es una migración real de ventas desde WhatsApp hacia el sitio web,
-        consistente en tres de las cuatro líneas. El canal que más pesa en el negocio tiene una
-        conversión crítica documentada, del 10,2%, lo que explica parte de esta migración.
+      <p>
+        Si la meta es crecimiento proporcional, la palanca no es solo mejorar el sitio web,
+        es entender qué está frenando a WhatsApp para crecer al mismo ritmo, sobre todo dado que
+        ya se identificó una conversión crítica en ese canal, del 10,2%.
       </p>
-      <p style="margin-top:16px">
+      <p>
         <a class="enlace-interno claro" href="#agosto">
-          Ver la conversión de WhatsApp en la sección anterior
+          Ver esa conversión en el informe oficial de agosto
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
